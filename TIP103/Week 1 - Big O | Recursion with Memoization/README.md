@@ -11,7 +11,7 @@ This notation is most often used when describing the time and space complexities
 4. Sum Rule
    - If f(n) is in O(g(n)) and h(n) is in O(g(n)), then __f(n) + h(n) = O(g(n))__.
 5. Product Rule
-   - If f(n) is in O(g(n)) and h(n) is in O(k(n)), then __f(n) * h(n) = O(g(n) * (k(n)).
+   - If f(n) is in O(g(n)) and h(n) is in O(k(n)), then __f(n) * h(n) = O(g(n) * (k(n))__.
 
 
 
