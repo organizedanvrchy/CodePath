@@ -75,7 +75,6 @@ This is an optimization technique, particularly useful in recursion, that improv
    - Prevents recomputation of results for same inputs.
 ### 3. Implementation
    - This can be manually implemented rather easily.
-   - 
 ### e.g. Calculating the Fibonacci Sequence with Memoization (in Python)
 ```python3
 def fibonacci_memo(n, memo={}):
