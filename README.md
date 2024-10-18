@@ -5,7 +5,7 @@ This repository contains information that I have gathered and problems that I ha
 - TIP103 | Advanced Technical Interview Prep
   <details>
     <summary>Classes</summary>
-    Week 1<br>
+   [Week 1](https://github.com/organizedanvrchy/CodePath/tree/main/TIP103/Week%201%20-%20Big%20O%20%7C%20Recursion%20with%20Memoization)<br>
     Week 2<br>
     Week 3<br>
     Week 4<br>
