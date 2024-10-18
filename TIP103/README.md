@@ -12,23 +12,39 @@ This repository contains information that I have gathered and problems that I ha
     <td><a href="https://github.com/organizedanvrchy/CodePath/tree/main/TIP103/Week%201%20-%20Big%20O%20%7C%20Recursion%20with%20Memoization">Big O | Recursion with Memoization</td>
   </tr>
   <tr>
-    <td>Spring 2024</td>
-    <td>CIS675 - Design & Analysis of Algorithms</td>
+    <td>Week 2</td>
+    <td>Linked Lists and Strings/Arrays</td>
   </tr>
   <tr>
-    <td>Spring 2024</td>
-    <td>CSE687 - Object Oriented Design</td>
+    <td>Week 3</td>
+    <td>Strings/Arrays continued, Hash Tables, and Heaps</td>
   </tr>
   <tr>
-    <td>Summer 2024</td>
-    <td>CSE643 - Computer Security</td>
+    <td>Week 4</td>
+    <td>Review</td>
   </tr>
   <tr>
-    <td>Fall 2024</td>
-    <td>CIS655 - Advanced Computer Architecture</td>
+    <td>Week 5</td>
+    <td>Stacks and Queues, and Trees</td>
   </tr>
   <tr>
-    <td>Fall 2024</td>
-    <td>CIS657 - Principles of Operating Systems</td>
+    <td>Week 6</td>
+    <td>Intro to Graphs and Graph Traversals</td>
+  </tr>
+  <tr>
+    <td>Week 7</td>
+    <td>Graphs Algorithms</td>
+  </tr>
+  <tr>
+    <td>Week 8</td>
+    <td>Greedy Algorithms</td>
+  </tr>
+  <tr>
+    <td>Week 9</td>
+    <td>Backtracking & Review</td>
+  </tr>
+  <tr>
+    <td>Week 10</td>
+    <td>Final Review</td>
   </tr>
 </table>
