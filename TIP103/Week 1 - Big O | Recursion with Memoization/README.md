@@ -38,7 +38,7 @@ This notation is most often used when describing the time and space complexities
 </picture>
 
 > [!NOTE]
-> Image and further explanations can be found at GeeksForGeeks (Link Below)
+> Images and further explanations can be found at GeeksForGeeks (Link in footnotes)
 
 
 
