@@ -85,6 +85,21 @@ def fibonacci_memo(n, memo={}):
     memo[n] = fibonacci_memo(n - 1, memo) + fibonacci_memo(n - 2, memo)  # Store result
     return memo[n]
 ```
+## Practice Questions
+### Warmups
+[Problem 1: Add Two Numbers](https://github.com/organizedanvrchy/LeetCode/blob/main/Add_Two_Numbers.py)
+[Problem 2: Decode String](https://github.com/organizedanvrchy/LeetCode/blob/main/Decode_String.py)
+
+### Session #1
+[Problem 1: Substring](https://github.com/organizedanvrchy/CodePath/blob/main/TIP103/Week%201%20-%20Big%20O%20%7C%20Recursion%20with%20Memoization/Substring.py)
+[Problem 2: Longest Common Prefix](https://github.com/organizedanvrchy/LeetCode/blob/main/Longest_Common_Prefix.py)
+[Problem 3: Add Binary](https://github.com/organizedanvrchy/LeetCode/blob/main/Add_Binary.py)
+
+### Session #2
+[Problem 1: Integer Replacement](https://github.com/organizedanvrchy/LeetCode/blob/main/Integer_Replacement.py)
+[Problem 2: Roman to Integer](https://github.com/organizedanvrchy/LeetCode/blob/main/Roman_to_Integer.py)
+[Problem 3: Integer to Roman](https://github.com/organizedanvrchy/LeetCode/blob/main/Integer_to_Roman.py)
+
 
 [^1]: [GeeksForGeeks](https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/#what-is-bigo-notation)
 [^2]: [CodeAcademy](https://www.codecademy.com/resources/blog/recursion/)
