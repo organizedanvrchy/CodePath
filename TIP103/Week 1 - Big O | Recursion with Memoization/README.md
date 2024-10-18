@@ -16,12 +16,15 @@ This notation is most often used when describing the time and space complexities
    - If f(n) is in O(g(n)) and g(n) is in O(h(n)), then __f(g(n)) = O(h(n))__.
   
 ## Common Big-O Notations
-1. Constant Time Complexity: O(1)
-   - This notation refers to algorithms that take the same amount of time to complete, while ignoring the input size. Essentially, they only take "one" step. 
-2. Linear Time Complexity: O(n)
+### 1. Constant Time Complexity: O(1)
+   - This notation refers to algorithms that take the same amount of time to complete, while ignoring the input size. Essentially, they only take "one" step.
+### 2. Linear Time Complexity: O(n)
    - This notation indicates that the running time of an algorithm grows linearly with the input size. The algorithm performs the same set of steps for each input element.
-3. Quadratic Time Complexity: O(n<sup>2</sup>) 
-
+### 3. Logarithmic Time Complexity: O(logn)
+   - This notation refers to algorithms that have running times that grow logarithmically relative to their input size. This is common for algorithms such as Divide and Conquer and Binary Search.
+### 4. Quadratic Time Complexity: O(n<sup>2</sup>) 
+   - This notation indicates that the performance of algorithm is directly proportional to the square of the input size. This is the common runtime for nested loops, graphing problems, and sorting algorithms (such as Bubble Sort, Selection Sort, and Insertion Sort).
+### 5. Cubic Time
 
 
 
