@@ -4,6 +4,8 @@ This notation is most often used when describing the time and space complexities
 ## Important Properties
 1. Non-negativity.
    The growth rate described by Big-O notation is always non-negative. It does not allow for negative values.
+2. Transitivity.
+   If f(n) is in O(g(n)) and g(n) is in O(h(n)), then f(n) is also in O(h(n)).
 
 
 
