@@ -36,6 +36,7 @@ This notation is most often used when describing the time and space complexities
 <picture>
    <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/mypic.png">
 </picture>
+
 > [!NOTE]
 > Image and further explanations can be found at GeeksForGeeks (Link Below)
 
