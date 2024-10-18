@@ -87,7 +87,6 @@ def fibonacci_memo(n, memo={}):
 ```
 ## Practice Questions
 ### Warmups
-<a href="https://github.com/organizedanvrchy/LeetCode/blob/main/Add_Two_Numbers.py" target="_blank">Problem 1: Add Two Numbers</a>
 [Problem 1: Add Two Numbers](https://github.com/organizedanvrchy/LeetCode/blob/main/Add_Two_Numbers.py)<br>
 [Problem 2: Decode String](https://github.com/organizedanvrchy/LeetCode/blob/main/Decode_String.py)
 
