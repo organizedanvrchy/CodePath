@@ -55,9 +55,16 @@ This is when a function calls itself directly or indirectly for the purpose of b
 def fibonacci(n):
     if n <= 1:  # Base case
         return n
-    else:
+    else:  # Recursive Case
         return fibonacci(n - 1) + fibonacci(n - 2)
 ```
-
+### Tail Recursion
+A special case of recursion, where the recursive call is the last operation in the function.
+```python3
+def tail_recursive_fib(n, a=0, b=1):
+    if n == 0:
+        return a
+    return tail_recursive_fib(n - 1, b, a + b)  # Tail call
+```
 
 [^1]: [GeeksForGeeks](https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/#what-is-bigo-notation)
