@@ -1,5 +1,5 @@
 # Big O Complexity Analysis
-This notation is most often used when describing the time and space complexities of algorithms. In this case, __time__ refers to _how long it takes the algorithm to complete_ and __space__ refers to _how much memory the algorithm uses during execution_. Hence, Big-O notation is a standardized way of measuring the _efficiency_ of an algorithm, whereby; it represents the __worst case__ or __upper bound__ time complexity. Big-O notation is denoted as: __O(f(n))__ where __f(n)__ often represents the __number of steps__ that an algorithm takes to solve a problem of size n[^1]. 
+This notation is most often used when describing the time and space complexities of algorithms. In this case, __time__ refers to _how long it takes the algorithm to complete_ and __space__ refers to _how much memory the algorithm uses during execution_. Hence, Big-O notation is a standardized way of measuring the _efficiency_ of an algorithm, whereby; it represents the __worst case__ or __upper bound__ time complexity. Big-O notation is denoted as: __O(f(n))__ where __f(n)__ often represents the __number of steps__ that an algorithm takes to solve a problem of size n.[^1]
 
 ## Important Properties
 ### 1. Non-negativity
@@ -36,6 +36,8 @@ This notation is most often used when describing the time and space complexities
 <picture>
    <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/mypic.png">
 </picture>
+> [!NOTE]
+> Image and further explanations can be found at GeeksForGeeks (Link Below)
 
 
 
