@@ -40,6 +40,15 @@ This notation is most often used when describing the time and space complexities
 > [!NOTE]
 > Images and further explanations can be found at GeeksForGeeks (Link in footnotes)
 
+# Recursion with Memoization
+## Recursion
+This is when a function calls itself directly or indirectly for the purpose of breaking a component down into smaller components (to solve a problem). Recursion usually allows for simple and elegant code but can often be less efficient than iterative solutions, consume stack space, and perform redudant calculations. Recursive solutions are generally composed of __3__ key components:
+### 1. Base Case
+   - This is the condition that stops recursion when met. Must be included to prevent infinite recursion and stack overflow.
+### 2. Recursive Case
+   - This is the logic portion of the recursive function that breaks the problem into subproblems and gradually moves towards the base case.
+### 3. Call Stack
+   - This exists to keep track of each call of a recursive function, where when the base case is reached, the calls are resolves in reverse order (LIFO).
 
 
 
