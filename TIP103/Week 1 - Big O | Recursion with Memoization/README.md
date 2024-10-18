@@ -50,7 +50,7 @@ This is when a function calls itself directly or indirectly for the purpose of b
 ### 3. Call Stack
    - This exists to keep track of each call of a recursive function, where when the base case is reached, the calls are resolves in reverse order (LIFO).
 
-### e.g. Calculating the Fibonacci Sequence
+### e.g. Calculating the Fibonacci Sequence (in Python)
 ```python3
 def fibonacci(n):
     if n <= 1:  # Base case
