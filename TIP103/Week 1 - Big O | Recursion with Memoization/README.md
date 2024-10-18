@@ -87,18 +87,18 @@ def fibonacci_memo(n, memo={}):
 ```
 ## Practice Questions
 ### Warmups
-[Problem 1: Add Two Numbers](https://github.com/organizedanvrchy/LeetCode/blob/main/Add_Two_Numbers.py)
-[Problem 2: Decode String](https://github.com/organizedanvrchy/LeetCode/blob/main/Decode_String.py)
+[Problem 1: Add Two Numbers](https://github.com/organizedanvrchy/LeetCode/blob/main/Add_Two_Numbers.py)<br>
+[Problem 2: Decode String](https://github.com/organizedanvrchy/LeetCode/blob/main/Decode_String.py)<br>
 
 ### Session #1
-[Problem 1: Substring](https://github.com/organizedanvrchy/CodePath/blob/main/TIP103/Week%201%20-%20Big%20O%20%7C%20Recursion%20with%20Memoization/Substring.py)
-[Problem 2: Longest Common Prefix](https://github.com/organizedanvrchy/LeetCode/blob/main/Longest_Common_Prefix.py)
-[Problem 3: Add Binary](https://github.com/organizedanvrchy/LeetCode/blob/main/Add_Binary.py)
+[Problem 1: Substring](https://github.com/organizedanvrchy/CodePath/blob/main/TIP103/Week%201%20-%20Big%20O%20%7C%20Recursion%20with%20Memoization/Substring.py)<br>
+[Problem 2: Longest Common Prefix](https://github.com/organizedanvrchy/LeetCode/blob/main/Longest_Common_Prefix.py)<br>
+[Problem 3: Add Binary](https://github.com/organizedanvrchy/LeetCode/blob/main/Add_Binary.py)<br>
 
 ### Session #2
-[Problem 1: Integer Replacement](https://github.com/organizedanvrchy/LeetCode/blob/main/Integer_Replacement.py)
-[Problem 2: Roman to Integer](https://github.com/organizedanvrchy/LeetCode/blob/main/Roman_to_Integer.py)
-[Problem 3: Integer to Roman](https://github.com/organizedanvrchy/LeetCode/blob/main/Integer_to_Roman.py)
+[Problem 1: Integer Replacement](https://github.com/organizedanvrchy/LeetCode/blob/main/Integer_Replacement.py)<br>
+[Problem 2: Roman to Integer](https://github.com/organizedanvrchy/LeetCode/blob/main/Roman_to_Integer.py)<br>
+[Problem 3: Integer to Roman](https://github.com/organizedanvrchy/LeetCode/blob/main/Integer_to_Roman.py)<br>
 
 
 [^1]: [GeeksForGeeks](https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/#what-is-bigo-notation)
