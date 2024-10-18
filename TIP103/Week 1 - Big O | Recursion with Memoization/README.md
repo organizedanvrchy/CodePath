@@ -12,6 +12,15 @@ This notation is most often used when describing the time and space complexities
    - If f(n) is in O(g(n)) and h(n) is in O(g(n)), then __f(n) + h(n) = O(g(n))__.
 5. Product Rule
    - If f(n) is in O(g(n)) and h(n) is in O(k(n)), then __f(n) * h(n) = O(g(n) * (k(n))__.
+6. Composition Rule
+   - If f(n) is in O(g(n)) and g(n) is in O(h(n)), then __f(g(n)) = O(h(n))__.
+  
+## Common Big-O Notations
+1. Constant Time Complexity: O(1)
+   - This notation refers to algorithms that take the same amount of time to complete, while ignoring the input size. Essentially, they only take "one" step. 
+2. Linear Time Complexity: O(n)
+   - This notation indicates that the running time of an algorithm grows linearly with the input size. The algorithm performs the same set of steps for each input element.
+3. Quadratic Time Complexity: O(n<sup>2</sup>) 
 
 
 
