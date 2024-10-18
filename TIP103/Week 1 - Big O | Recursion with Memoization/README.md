@@ -51,13 +51,13 @@ This is when a function calls itself directly or indirectly for the purpose of b
    - This exists to keep track of each call of a recursive function, where when the base case is reached, the calls are resolves in reverse order (LIFO).
 
 ### e.g. Calculating the Fibonacci Sequence
-'''
+```
 def fibonacci(n):
     if n <= 1:  # Base case
         return n
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
-'''
+```
 
 
 [^1]: [GeeksForGeeks](https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/#what-is-bigo-notation)
