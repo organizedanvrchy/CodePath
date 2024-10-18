@@ -68,7 +68,7 @@ def tail_recursive_fib(n, a=0, b=1):
 ```
 
 ## Memoization
-This is an optimization technique, particularly useful in recursion, that improves the efficiency of algorithms by storing computation results in a cache (temporary data store) and then retrieving the same information from the cache when same inputs occur again. This technique maintains the simple implementation found in recursion while siginificantly improving the efficiency of the algorithm, but can cause increased memory consumption due to creation of a cache.[^3] The __3__ main concepts of Memoizations are:
+This is an optimization technique, particularly useful in recursion, that improves the efficiency of algorithms by storing computation results in a cache (temporary data store) and then retrieving the same information from the cache when same inputs occur again. This technique maintains the simple implementation found in recursion while siginificantly improving the efficiency of the algorithm, but can cause increased memory consumption due to creation of a cache.[^3] The __3__ main concepts of Memoization are:
 ### 1. Storage of Results 
    - The output of each function call is stored in a cache, which can be a hash table or dictionary. This allows for reusability of the stored results when/if the algorithm encounters the same inputs.
 ### 2. Avoiding Redundancy
