@@ -42,7 +42,7 @@ This notation is most often used when describing the time and space complexities
 
 # Recursion with Memoization
 ## Recursion
-This is when a function calls itself directly or indirectly for the purpose of breaking a component down into smaller components (to solve a problem). Recursion usually allows for simple and elegant code but can often be less efficient than iterative solutions, consume stack space, and perform redudant calculations. Recursive solutions are generally composed of __3__ key components:
+This is when a function calls itself directly or indirectly for the purpose of breaking a component down into smaller components (to solve a problem). Recursion usually allows for simple and elegant code but can often be less efficient than iterative solutions, consume stack space, and perform redudant calculations.[^2] Recursive solutions are generally composed of __3__ key components:
 ### 1. Base Case
    - This is the condition that stops recursion when met. Must be included to prevent infinite recursion and stack overflow.
 ### 2. Recursive Case
@@ -59,7 +59,7 @@ def fibonacci(n):
         return fibonacci(n - 1) + fibonacci(n - 2)
 ```
 ### Tail Recursion
-A special case of recursion, where the recursive call is the last operation in the function.
+A special case of recursion to improve performance, where the recursive call is the last operation in the function.
 ```python3
 def tail_recursive_fib(n, a=0, b=1):
     if n == 0:
@@ -67,4 +67,26 @@ def tail_recursive_fib(n, a=0, b=1):
     return tail_recursive_fib(n - 1, b, a + b)  # Tail call
 ```
 
+## Memoization
+This is an optimization technique, particularly useful in recursion, that improves the efficiency of algorithms by storing computation results in a cache (temporary data store) and then retrieving the same information from the cache when same inputs occur again. This technique maintains the simple implementation found in recursion while siginificantly improving the efficiency of the algorithm, but can cause increased memory consumption due to creation of a cache.[^3] The __3__ main concepts of Memoizations are:
+### 1. Storage of Results 
+   - The output of each function call is stored in a cache, which can be a hash table or dictionary. This allows for reusability of the stored results when/if the algorithm encounters the same inputs.
+### 2. Avoiding Redundancy
+   - Prevents recomputation of results for same inputs.
+### 3. Implementation
+   - This can be manually implemented rather easily.
+   - 
+### e.g. Calculating the Fibonacci Sequence with Memoization (in Python)
+```python3
+def fibonacci_memo(n, memo={}):
+    if n in memo:  # Check if result is already computed
+        return memo[n]
+    if n <= 1:  # Base case
+        return n
+    memo[n] = fibonacci_memo(n - 1, memo) + fibonacci_memo(n - 2, memo)  # Store result
+    return memo[n]
+```
+
 [^1]: [GeeksForGeeks](https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/#what-is-bigo-notation)
+[^2]: [CodeAcademy](https://www.codecademy.com/resources/blog/recursion/)
+[^3]: [FreeCodeCamp](https://www.freecodecamp.org/news/memoization-in-javascript-and-react)
