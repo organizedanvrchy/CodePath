@@ -30,8 +30,14 @@ This notation is most often used when describing the time and space complexities
    - This notation indicates that the performance of algorithm is directly proportional to the cube of the input size. This is common in matrix multiplication algorithms.
 ### 7. Exponential Time Complexity: O(2<sup>n</sup>)
    - This notation refers to algorithms with running times that double with each addition to input size. This is common in Recursive algorithms, Tree Depth algorithms, or Brute Force algorithms.
+### 8. Factorial Time Complexity: O(n!)
+   - This notation indicates that the algorithm grows factorially with the size of the input. This is common in algorithms that have to generate all permutations of a data set.
 
-
+<picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://media.geeksforgeeks.org/wp-content/cdn-uploads/mypic.png">
+   <source media="(prefers-color-scheme: light)" srcset="https://media.geeksforgeeks.org/wp-content/cdn-uploads/mypic.png">
+   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/mypic.png">
+</picture>
 
 
 
