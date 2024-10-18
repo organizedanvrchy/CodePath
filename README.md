@@ -1,7 +1,7 @@
 ## TABLE OF CONTENTS
 - TIP103 | Advanced Technical Interview Prep
   <details>
-    <summary>Weeks</summary>
+    <summary>Classes</summary>
     Week 1<br>
     Week 2<br>
     Week 3<br>
