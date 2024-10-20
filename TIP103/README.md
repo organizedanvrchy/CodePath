@@ -13,7 +13,7 @@ This repository contains information that I have gathered and problems that I ha
   </tr>
   <tr>
     <td>Week 2</td>
-    <td>Linked Lists and Strings/Arrays</td>
+    <td><a href="https://github.com/organizedanvrchy/CodePath/tree/main/TIP103/Week%202%20-%20Linked%20Lists%20and%20Strings%20%26%20Arrays">Linked Lists and Strings/Arrays</td>
   </tr>
   <tr>
     <td>Week 3</td>
