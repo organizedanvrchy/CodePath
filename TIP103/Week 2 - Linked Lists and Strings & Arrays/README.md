@@ -31,12 +31,14 @@ class Node:
 
 ### Circular Linked List
 In this linked list, the last node points back to the first node, forming a loop or circle. These lists are helpful for tasks that include scheduling and managing playlists. Circular Linked Lists can either be:
-1. Circular Singly Linked Lists
+
+1. Circular Singly Linked Lists<br>
   - where each node has just one pointer to the next node and the last node points back to the first node instead of null.
 <picture>
    <img alt="Circular Singly Linked Lists" src="https://media.geeksforgeeks.org/wp-content/uploads/20240806130914/Representation-of-circular-linked-list.webp">
 </picture>
-2. Circular Doubly Linked Lists
+
+2. Circular Doubly Linked Lists<br>
   - where each node has two pointers to the previous and next nodes, but here, there first node's previous pointer points to the last node and the last node's next pointer points to the first node. 
 <picture>
    <img alt="Circular Doubly Linked Lists" src="https://media.geeksforgeeks.org/wp-content/uploads/20240806145223/Representation-of-circular-doubly-linked-list.webp">
