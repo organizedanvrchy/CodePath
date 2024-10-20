@@ -10,7 +10,7 @@ A Linked List is comprised of nodes containing 2 parts:
 ### Singly Linked Lists
 In a Singly Linked List, each node only points to the next node and the last node points to null.
 
-```
+```python3
 class Node:
     def __init__(self, data):
        # Data part of the node
@@ -21,7 +21,7 @@ class Node:
 ### Doubly Linked Lists
 In this type of list, each node contains a pointer to both the next node and the previous node. This type of list allows for more efficient traversal in both direction of the list when compared to the singly linked list. This also allows for quick insertion and deletion of nodes. 
 
-```
+```python3
 class Node:
     def __init__(self, data):
         self.data = data   # value or information stored in node 
