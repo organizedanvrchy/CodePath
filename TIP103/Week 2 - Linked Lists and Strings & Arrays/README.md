@@ -43,3 +43,20 @@ In this linked list, the last node points back to the first node, forming a loop
 <picture>
    <img alt="Circular Doubly Linked Lists" src="https://media.geeksforgeeks.org/wp-content/uploads/20240806145223/Representation-of-circular-doubly-linked-list.webp">
 </picture>
+
+```
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+# Initilize and allocate memory for nodes
+first = Node(2)
+second = Node(3)
+last = Node(4)
+
+# Connect nodes
+first.next = second
+second.next = last
+last.next = first
+```
