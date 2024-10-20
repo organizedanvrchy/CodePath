@@ -1,3 +1,7 @@
+# Strings
+WIP...
+# Arrays
+WIP...
 # Linked Lists
 Linked Lists are fundamental data structures for storing collections of elements. Linked Lists allow for more efficient insertion and deletion operations when compared to arrays since they consist of nodes that point to the next node in a sequence and do not use contiguous blocks or memory. Linked Lists also have dynamic size, allowing for growing and shrinking as necessary. However, these lists require additional memory for the pointers and only offer sequential access to nodes (which might be slower than random access in arrays).[^1]
 
@@ -125,5 +129,61 @@ def findLength(head):
     # Return the final length of the list
     return length
 ```
+### Insertion
+This operation adds a new node to the list. Node insertion can either be at the beginning of a list, end of a list, or a specific position in the list. 
+
+__Inserting at the beggining of the list__ <br>
+In Singly Linked Lists, insertion at the beginning involves creating a new node, setting the next point of the the new node to the current head of the list, moving the head to point to the new node, and return the new head.
+
+```python3
+```
+
+In a Doubly Linked List,
+
+```python3
+```
+
+In a Circular Linked List, 
+
+```python3
+```
+
+__Inserting at the end of the list__ <br>
+In Singly Linked Lists, insertion at the end involves
+
+```python3
+```
+
+In a Doubly Linked List,
+
+```python3
+```
+
+In a Circular Linked List, 
+
+```python3
+```
+
+__Inserting at a specific point in the list__ <br>
+In Singly Linked Lists, insertion at the end involves
+
+```python3
+```
+
+In a Doubly Linked List,
+
+```python3
+```
+
+In a Circular Linked List, 
+
+```python3
+```
+### Deletion
+
+### Deletion
+
+
+
 [^1]:[GeekForGeeks](https://www.geeksforgeeks.org/linked-list-data-structure/)
 [^2]:[Images from W3Schools](https://www.w3schools.com/dsa/dsa_data_linkedlists_types.php)
