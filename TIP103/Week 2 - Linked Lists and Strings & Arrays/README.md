@@ -1,3 +1,12 @@
+<table>
+    <tr>
+        <td>Jump to --></td>
+        <td><a href="https://github.com/organizedanvrchy/CodePath/edit/main/TIP103/Week%202%20-%20Linked%20Lists%20and%20Strings%20%26%20Arrays/README.md#strings" target="_blank">Strings</td>
+        <td><a href="https://github.com/organizedanvrchy/CodePath/edit/main/TIP103/Week%202%20-%20Linked%20Lists%20and%20Strings%20%26%20Arrays/README.md#arrays" target="_blank">Arrays</td>
+        <td><a href="https://github.com/organizedanvrchy/CodePath/edit/main/TIP103/Week%202%20-%20Linked%20Lists%20and%20Strings%20%26%20Arrays/README.md#linked-lists" target="_blank">Linked Lists</td>
+    </tr>
+</table>
+
 # Strings
 Strings are a sequence of characters stored in contiguous memory locations and can include letters, numbers, symbols, and whitespaces. Characters in a string can be represented by specific encoding, such as ASCII (Maps 128 characters to numbers 0 to 127) or Unicode. In some programming languages, strings are immutable (cannot be changed after creation), where operations on the string often lead to the creation of a new string instead of modifying the original. While in other programming languages, strings are mutable (such as in C++), where they can be modified in-place. Strings are often represented using either single quotes or double quotes; however, some languages will mostly likely use single quotes to denote characters and double quotes to denote strings. 
 > [!NOTE]
@@ -5,10 +14,10 @@ Strings are a sequence of characters stored in contiguous memory locations and c
 
 ## Common Escape Sequences
 Escape sequences are special character sequences that are non-printable. They usually start with a "\". Some frequent examples include:
-1. __\n__ - Newline
-2. __\t__ - Tab
-3. __\\__ - Backslash
-4. __\"__ - Double Quote
+1. __\\n__ - Newline
+2. __\\t__ - Tab
+3. __\\\\__ - Backslash
+4. __\\"__ - Double Quote
 
 ## Common Operations
 ### Concatenation
@@ -54,7 +63,64 @@ for char in string:
 ```
 
 # Arrays
-WIP...
+Arrays are fundamental and linear data structures that are used to store a collection of same data type elements in contiguous memory locations. Each element in an array is indexed (starting from 0) which allows for quick access and modification in most cases. Arrays are generally of fixed sized, but some languages support dynamically sized arrays using underlying fixed sized arrays (generally involving doubling the array size before it is full). In Python, arrays are implemented as lists, allowing for dynamic sizing, whereas in other languages (such as C and Java) arrays are declared with a specific type and size. 
+
+```python3
+# Python
+arr = [1, 2, 3, 4, 5]
+```
+
+```java
+// Java
+int[] arr = new int[5];  // Array of integers with size 5
+arr[0] = 10;  // Initializing the first element
+```
+
+## Indexing
+Elements in arrays can be accessed and modified using their index. Generally, the first element is at index 0, while the second element is at index 1, and so forth. 
+
+```python3
+arr = [10, 20, 30, 40]
+print(arr[0])  # Access the first element (Output: 10)
+
+arr[1] = 25    # Modify the second element
+print(arr[1])  # Output: 25
+```
+
+## Common Operations
+### Traverse
+Traversing through an array involves looping through its elements and processing each one at a time.
+
+```python3
+arr = [10, 20, 30, 40]
+for elem in arr:
+    print(elem)
+```
+
+### Search
+Finding an element in an array can be done using either the value or the index of the element. In Python, array.index(x) is used to find the index of the first occurrence of the x (where x is an integer). 
+
+### Insert
+Adding elements to array are generally only done by overwriting an existing element or creating a new array. In Python, since arrays are lists, arr.append() and arr.insert() functions can be used to efficiently insert elements to an array. However, in other languages, the insertion of an element is rather costly. 
+
+### Delete
+Deleting an element from a static array is also very costly in many languages. However, in Python, dynamic arrays allow for efficient deletion using the arr.remove() function.
+
+### Sort
+This is the rearranging of elements in an array in either ascending or descending order. In Python, arrays can be sorted using arr.sort() or sorted(arr) functions and returns a newly sorted list. 
+
+## Multidimensional Arrays
+Arrays can also be __multidimensional__ allowing for the storing of data in more than 1D (such as the creation of matrices). This can be done in Python as follows:
+
+```python3
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print(matrix[1][2])  # Accesses the element in the second row, third column (Output: 6)
+```
+
 # Linked Lists
 Linked Lists are fundamental data structures for storing collections of elements. Linked Lists allow for more efficient insertion and deletion operations when compared to arrays since they consist of nodes that point to the next node in a sequence and do not use contiguous blocks or memory. Linked Lists also have dynamic size, allowing for growing and shrinking as necessary. However, these lists require additional memory for the pointers and only offer sequential access to nodes (which might be slower than random access in arrays).[^1]
 
@@ -141,7 +207,7 @@ last.next = first
 ```
 
 ## Common Operations
-### Traversal
+### Traverse
 This is simply the visiting of each node in the linked link and is generally the precursor to some other operation such as print or process the data in a node. This can be done as shown below (using Python):
 
 ```python3
@@ -154,7 +220,7 @@ def traverseLL(head):
         curr = curr.next # Move to the next node
 ```
 
-### Searching
+### Search
 This operation finds a node with a specific value within the Linked List. This method involves traversing the list and checking if the current node's data matches the target value and returns True if a match is found. This can be implemented as:
 
 ```python3
@@ -167,7 +233,7 @@ def searchLL(head, target):
         head = head.next       # Move to next node
     return False               # No matching value found
 ```
-### Finding Length of a Linked List
+### Length
 This is a common operation to find the total number of nodes in a list. This can be done as follows:
 
 ```python3
@@ -184,7 +250,7 @@ def findLength(head):
     return length
 ```
 
-### Insertion
+### Insert
 This operation adds a new node to the list. Node insertion can either be at the beginning of a list, end of a list, or a specific position in the list. 
 
 __Inserting at the beggining of the list__ <br>
@@ -234,11 +300,7 @@ In a Circular Linked List,
 
 ```python3
 ```
-### Deletion
-
-### Deletion
-
-
+### Delete
 
 [^1]:[GeekForGeeks](https://www.geeksforgeeks.org/linked-list-data-structure/)
 [^2]:[Images from W3Schools](https://www.w3schools.com/dsa/dsa_data_linkedlists_types.php)
