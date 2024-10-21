@@ -1,5 +1,56 @@
 # Strings
-WIP...
+Strings are a sequence of characters stored in contiguous memory locations and can include letters, numbers, symbols, and whitespaces. Characters in a string can be represented by specific encoding, such as ASCII (Maps 128 characters to numbers 0 to 127) or Unicode. In some programming languages, strings are immutable (cannot be changed after creation), where operations on the string often lead to the creation of a new string instead of modying the original. While in other programming languages, string a mutable (such as in C++), where they can be modified in-place.
+
+## Common Escape Sequences
+Escape sequences are special character sequences that are non-printable. They usually start with a "\". Some frequent examples include:
+1. __\n__ - Newline
+2. __\t__ - Tab
+3. __\\__ - Backslash
+4. __\"__ - Double Quote
+
+## Common Operations
+### Concatenation
+This is the joining of two or more strings together.
+
+```python3
+"Hello, " + "world!"
+```
+### Substring Extraction
+This operation allows for the extraction of a part of a string. In Python, this can be done using slicing, with syntax __string[start:end]__, where the start and end indices are inclusive.
+
+```python3
+string = "Hello"
+substring = string[1:4]  # Extracts characters from index 1 to 3 (end index is exclusive)
+print(substring)  # Output: "ell"
+```
+
+### Searching
+This operation finds the position of a character or substring in a string. In Python, this can be done using the find() function, where the index of the first occurrence of the character or substring is returned (or -1 if not found). 
+
+```python3
+string = "Hello"
+position = string.find("l")  # Finds the first occurrence of "l"
+print(position)  # Output: 2
+```
+
+### Length
+The length of the string is a very useful piece of information that can be used in other operations. This operation specifically sums up the number of characters in a given string. In Python, this can be done using the len() function. 
+
+```python3
+string = "Hello"
+length = len(string)
+print(length)  # Output: 5
+```
+
+### Iteration
+This operation loops through the characters in a string and also enables other string operations. In Python, this can be done using a _for_ loop.
+
+```python3
+string = "Hello"
+for char in string:
+    print(char, end=" ")  # Output: H e l l o 
+```
+
 # Arrays
 WIP...
 # Linked Lists
@@ -100,6 +151,7 @@ def traverseLL(head):
         print(curr.data) # Or some other operation
         curr = curr.next # Move to the next node
 ```
+
 ### Searching
 This operation finds a node with a specific value within the Linked List. This method involves traversing the list and checking if the current node's data matches the target value and returns True if a match is found. This can be implemented as:
 
@@ -129,6 +181,7 @@ def findLength(head):
     # Return the final length of the list
     return length
 ```
+
 ### Insertion
 This operation adds a new node to the list. Node insertion can either be at the beginning of a list, end of a list, or a specific position in the list. 
 
