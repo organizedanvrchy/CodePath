@@ -2,8 +2,8 @@
     <tr>
         <td>Jump to --></td>
         <td><a href="https://github.com/organizedanvrchy/CodePath/blob/main/TIP103/Week%202%20-%20Linked%20Lists%20and%20Strings%20%26%20Arrays/README.md#strings" target="_blank">Strings</td>
-        <td><a href="https://github.com/organizedanvrchy/CodePath/edit/main/TIP103/Week%202%20-%20Linked%20Lists%20and%20Strings%20%26%20Arrays/README.md#arrays" target="_blank">Arrays</td>
-        <td><a href="https://github.com/organizedanvrchy/CodePath/edit/main/TIP103/Week%202%20-%20Linked%20Lists%20and%20Strings%20%26%20Arrays/README.md#linked-lists" target="_blank">Linked Lists</td>
+        <td><a href="https://github.com/organizedanvrchy/CodePath/blob/main/TIP103/Week%202%20-%20Linked%20Lists%20and%20Strings%20%26%20Arrays/README.md#arrays" target="_blank">Arrays</td>
+        <td><a href="https://github.com/organizedanvrchy/CodePath/blob/main/TIP103/Week%202%20-%20Linked%20Lists%20and%20Strings%20%26%20Arrays/README.md#linked-lists" target="_blank">Linked Lists</td>
     </tr>
 </table>
 
