@@ -1,5 +1,6 @@
 # Strings
-Strings are a sequence of characters stored in contiguous memory locations and can include letters, numbers, symbols, and whitespaces. Characters in a string can be represented by specific encoding, such as ASCII (Maps 128 characters to numbers 0 to 127) or Unicode. In some programming languages, strings are immutable (cannot be changed after creation), where operations on the string often lead to the creation of a new string instead of modying the original. While in other programming languages, string a mutable (such as in C++), where they can be modified in-place.
+Strings are a sequence of characters stored in contiguous memory locations and can include letters, numbers, symbols, and whitespaces. Characters in a string can be represented by specific encoding, such as ASCII (Maps 128 characters to numbers 0 to 127) or Unicode. In some programming languages, strings are immutable (cannot be changed after creation), where operations on the string often lead to the creation of a new string instead of modifying the original. While in other programming languages, string a mutable (such as in C++), where they can be modified in-place.
+Strings are often represented using either single quotes or double quotes; however, some languages will mostly likely use single quotes to denote characters and double quotes to denote strings. 
 
 ## Common Escape Sequences
 Escape sequences are special character sequences that are non-printable. They usually start with a "\". Some frequent examples include:
