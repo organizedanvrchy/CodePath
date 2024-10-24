@@ -34,7 +34,7 @@ This notation is most often used when describing the time and space complexities
    - This notation indicates that the algorithm grows factorially with the size of the input. This is common in algorithms that have to generate all permutations of a data set.
 
 <picture>
-   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/mypic.png">
+   <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/mypic.png">
 </picture>
 
 > [!NOTE]
