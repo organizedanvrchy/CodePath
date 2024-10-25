@@ -55,7 +55,7 @@ These graphs contain vertices that can be divided into two sets, where vertices 
 
 ## Graph Representations
 ### Adjacency Matrix
-This is a 2D matric where the row and columns correspond to vertices and the value of the entries correspond to the weight of an edge between those vertices. This is useful for dense graphs that have mostly connected vertex pairs.
+This is a 2D matrix where the row and columns correspond to vertices and the value of the entries correspond to the weight of an edge between those vertices. However; in unweighted graphs, the values are usually 0 or 1 (or can be boolean). This is useful for dense graphs that have mostly connected vertex pairs.
 
 <picture>
   <img src="https://i.imgur.com/GzU4BKw.png" width="500">
