@@ -202,10 +202,8 @@ print(res)
 ```
 
 ## Common Graph Algorithms
-### Dijkstra's Algorithm
+### Dijkstra's Algorithm[^2]
 This algorithm finds the shortest path from a source vertex to all other vertices in a weighted graph. The time complexity is O((V+E)logV) with priority queues.
-> [!NOTE]
-> Walkthrough[^2]
 
 ### Floyd-Warshall Algorithm
 This algorithm solves the all-pairs shortest path problem for weighted graphs with a time complexity of O(V<sup>3</sup>).
