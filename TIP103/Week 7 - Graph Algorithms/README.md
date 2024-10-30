@@ -38,6 +38,20 @@ class Graph:
         
         return stack[::-1]  # return reversed stack for topological order
 ```
+<table>
+    <tr>
+        <td>Complexity</td>
+        <td>Big-O</td>
+    </tr>
+    <tr>
+        <td>Time</td>
+        <td>O(E + V)</td>
+    </tr>
+    <tr>
+        <td>Space</td>
+        <td>O(V)</td>
+    </tr>
+</table>
 
 # Disjoint Set Union (Union Find)
 
