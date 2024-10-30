@@ -253,53 +253,94 @@ def findLength(head):
 ### Insert
 This operation adds a new node to the list. Node insertion can either be at the beginning of a list, end of a list, or a specific position in the list. 
 
-__Inserting at the beggining of the list__ <br>
-In Singly Linked Lists, insertion at the beginning involves creating a new node, setting the next point of the the new node to the current head of the list, moving the head to point to the new node, and return the new head.
+In __Singly Linked Lists__, insertion at the beginning involves creating a new node, setting the next point of the the new node to the current head of the list, moving the head to point to the new node, and return the new head.
 
 ```python3
 ```
 
-In a Doubly Linked List,
+In a __Doubly Linked List__, inserting a new node involves adjusting the next and prev pointers to adjacent nodes. 
+
+```python3
+# Structure of a Doubly Linked List
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+
+# Insertion at the Beginning
+def insert_at_beginning(head, data):
+    new_node = Node(data)
+    if head is None:
+        head = new_node
+    else:
+        new_node.next = head
+        head.prev = new_node
+        head = new_node
+    return head
+
+# Insertion at the End
+def insert_at_end(head, data):
+    new_node = Node(data)
+    if head is None:
+        return new_node
+    else:
+        temp = head
+        while temp.next is not None:
+            temp = temp.next
+        temp.next = new_node
+        new_node.prev = temp
+    return head
+
+# Insertion at a Specific Position
+def insert_at_position(head, data, position):
+    new_node = Node(data)
+    if position == 0:
+        return insert_at_beginning(head, data)
+    
+    temp = head
+    for _ in range(position - 1):
+        if temp is None:
+            raise Exception("Position out of bounds")
+        temp = temp.next
+    
+    if temp.next is None:  # Insertion at the end
+        temp.next = new_node
+        new_node.prev = temp
+    else:
+        new_node.next = temp.next
+        temp.next.prev = new_node
+        temp.next = new_node
+        new_node.prev = temp
+    
+    return head
+```
+
+<table>
+    <tr>
+        <td>Insertion</td>
+        <td>Time Complexity</td>
+    </tr>
+    <tr>
+        <td>Beginning</td>
+        <td>O(1)</td>
+    </tr>
+    <tr>
+        <td>End</td>
+        <td>O(n)</td>
+    </tr>
+    <tr>
+        <td>Specific Position</td>
+        <td>O(n)</td>
+    </tr>
+</table>
+
+
+In a __Circular Linked List__, 
 
 ```python3
 ```
 
-In a Circular Linked List, 
-
-```python3
-```
-
-__Inserting at the end of the list__ <br>
-In Singly Linked Lists, insertion at the end involves
-
-```python3
-```
-
-In a Doubly Linked List,
-
-```python3
-```
-
-In a Circular Linked List, 
-
-```python3
-```
-
-__Inserting at a specific point in the list__ <br>
-In Singly Linked Lists, insertion at the end involves
-
-```python3
-```
-
-In a Doubly Linked List,
-
-```python3
-```
-
-In a Circular Linked List, 
-
-```python3
-```
 ### Delete
 
 [^1]:[GeekForGeeks](https://www.geeksforgeeks.org/linked-list-data-structure/)
