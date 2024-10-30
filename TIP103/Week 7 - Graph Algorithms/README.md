@@ -45,7 +45,7 @@ class Graph:
     </tr>
     <tr>
         <td>Time</td>
-        <td>O(E + V)</td>
+        <td>O(V + E)</td>
     </tr>
     <tr>
         <td>Space</td>
