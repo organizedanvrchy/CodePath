@@ -75,30 +75,53 @@ This technique uses recursion to visit nodes, mark them as visited, fully explor
 ```python3
 from collections import defaultdict
 
-class Graph:
-    def __init__(self, vertices):
-        self.graph = defaultdict(list)
-        self.V = vertices
-    
-    def add_edge(self, u, v):
-        self.graph[u].append(v)
-    
-    def topological_sort_util(self, v, visited, stack):
-        visited[v] = True
-        for i in self.graph[v]:
-            if not visited[i]:
-                self.topological_sort_util(i, visited, stack)
-        stack.append(v)
-    
-    def topological_sort(self):
-        visited = [False] * self.V
-        stack = []
-        
-        for i in range(self.V):
-            if not visited[i]:
-                self.topological_sort_util(i, visited, stack)
-        
-        return stack[::-1]  # return reversed stack for topological order
+# Function to perform DFS and store the topological order
+def dfs(node, visited, stack, adj_list):
+    visited[node] = True  # Mark the current node as visited
+
+    # Recur for all vertices adjacent to this vertex
+    for neighbor in adj_list[node]:
+        if not visited[neighbor]:
+            dfs(neighbor, visited, stack, adj_list)
+
+    # Push current vertex to stack after all its neighbors are processed
+    stack.append(node)
+
+# Function to perform topological sort using DFS
+def topological_sort_dfs(vertices, edges):
+    adj_list = defaultdict(list)  # Adjacency list representation of the graph
+
+    # Build the graph
+    for u, v in edges:
+        adj_list[u].append(v)
+
+    visited = [False] * vertices  # Keep track of visited vertices
+    stack = []  # Stack to store the topological order
+
+    # Perform DFS for each vertex
+    for i in range(vertices):
+        if not visited[i]:
+            dfs(i, visited, stack, adj_list)
+
+    # Return the elements in the stack in reverse order (since stack gives us reverse topological order)
+    return stack[::-1]
+
+# Example Usage
+vertices = 6
+edges = [
+    (5, 2),
+    (5, 0),
+    (4, 0),
+    (4, 1),
+    (2, 3),
+    (3, 1)
+]
+
+topological_order = topological_sort_dfs(vertices, edges)
+print("Topological Order:", topological_order)
+```
+```python3
+Topological Order: [5, 4, 2, 3, 1, 0]
 ```
 <table>
     <tr>
