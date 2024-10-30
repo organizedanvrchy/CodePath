@@ -49,7 +49,7 @@ class Graph:
     </tr>
     <tr>
         <td>Space</td>
-        <td>O(V)</td>
+        <td>O(V + E)</td>
     </tr>
 </table>
 
