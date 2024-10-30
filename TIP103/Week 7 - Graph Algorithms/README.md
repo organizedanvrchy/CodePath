@@ -5,7 +5,7 @@ This is a common graphing concept that produces a linear ordering of vertices (n
 3. Repeating the above.
 
 ### Kahn's Algorithm
-This algorithm uses an "indgree" array and a queue to keep track of vertices with no incoming edges.
+This algorithm uses an "indegree" array and a queue to keep track of vertices with no incoming edges.
 
 ### DFS
 This technique uses recursion to visit nodes, mark them as visited, fully explore neighbors, and then add them to the output stack. 
