@@ -122,7 +122,7 @@ print(matrix[1][2])  # Accesses the element in the second row, third column (Out
 ```
 
 # Linked Lists
-Linked Lists are fundamental data structures for storing collections of elements. Linked Lists allow for more efficient insertion and deletion operations when compared to arrays since they consist of nodes that point to the next node in a sequence and do not use contiguous blocks or memory. Linked Lists also have dynamic size, allowing for growing and shrinking as necessary. However, these lists require additional memory for the pointers and only offer sequential access to nodes (which might be slower than random access in arrays).[^1]
+Linked Lists are fundamental data structures for storing collections of elements. Linked Lists allow for more efficient insertion and deletion operations when compared to arrays since they consist of nodes that point to the next node in a sequence and do not use contiguous blocks or memory. Linked Lists also have dynamic size, allowing for growing and shrinking as necessary. However, these lists have the disadvantage of __no backward traversals__ and __no direct access__. These lists also require additional memory for the pointers and only offer sequential access to nodes (which might be slower than random access in arrays).[^1]
 
 ## Structure
 A Linked List is comprised of nodes containing 2 parts:
@@ -170,7 +170,7 @@ class Node:
 In this linked list, the last node points back to the first node, forming a loop or circle. These lists are helpful for tasks that include scheduling and managing playlists. Circular Linked Lists can either be:
 
 1. Circular Singly Linked Lists<br>
-  - where each node has just one pointer to the next node and the last node points back to the first node instead of null.
+  - where each node has just one pointer to the next node and the last node points back to the first node instead of null. These lists have similar drawbacks to those in normal Singly Linked Lists.
   - 
 <picture>
    <img alt="Circular Singly Linked Lists" src="https://www.w3schools.com/dsa/img_linkedlists_circsingly.svg">
@@ -180,7 +180,7 @@ In this linked list, the last node points back to the first node, forming a loop
 > Images sourced from this link (in footnotes)[^2]
 
 2. Circular Doubly Linked Lists<br>
-  - where each node has two pointers to the previous and next nodes, but here, there first node's previous pointer points to the last node and the last node's next pointer points to the first node.
+  - where each node has two pointers to the previous and next nodes, but here, there first node's previous pointer points to the last node and the last node's next pointer points to the first node. These lists offer efficient navigation and have no special cases for end of list; however, the require pointer updating and create more memory overhead.
 
 <picture>
    <img alt="Circular Doubly Linked Lists" src="https://www.w3schools.com/dsa/img_linkedlists_circdoubly.svg">
@@ -253,15 +253,78 @@ def findLength(head):
 ### Insert
 This operation adds a new node to the list. Node insertion can either be at the beginning of a list, end of a list, or a specific position in the list. 
 
-In __Singly Linked Lists__, insertion at the beginning involves creating a new node, setting the next point of the the new node to the current head of the list, moving the head to point to the new node, and return the new head.
+In __Singly Linked Lists__, insertion involves creating a new node while ensuring that the list remaing properly linked. In these lists, there is only a _next_ pointer to consider.
 
 ```python3
+# Structure of a Singly Linked List Node
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+# Insertion at the Beginning
+def insertAtBeginning(head, data):
+    new_node = Node(data)
+    new_node.next = head
+    return new_node  # The new node becomes the head
+
+# Insertion at the End
+def insertAtEnd(head, data):
+    new_node = Node(data)
+    if head is None:
+        return new_node  # The list was empty, so new node becomes the head
+    temp = head
+    while temp.next:  # Traverse to the last node
+        temp = temp.next
+    temp.next = new_node  # Link the last node to the new node
+    return head
+
+# Insertion at a Specific Position
+def insertAtPosition(head, data, position):
+    new_node = Node(data)
+    
+    # Insertion at the beginning
+    if position == 0:
+        new_node.next = head
+        return new_node
+    
+    # Traverse to the node just before the desired position
+    temp = head
+    for _ in range(position - 1):
+        if temp is None:
+            raise Exception("Position out of bounds")
+        temp = temp.next
+    
+    # Insert the new node
+    new_node.next = temp.next
+    temp.next = new_node
+    
+    return head
 ```
 
-In a __Doubly Linked List__, inserting a new node involves adjusting the next and prev pointers to adjacent nodes. 
+<table>
+    <tr>
+        <td>Insertion</td>
+        <td>Time Complexity</td>
+    </tr>
+    <tr>
+        <td>Beginning</td>
+        <td>O(1)</td>
+    </tr>
+    <tr>
+        <td>End</td>
+        <td>O(n)</td>
+    </tr>
+    <tr>
+        <td>Specific Position</td>
+        <td>O(n)</td>
+    </tr>
+</table>
+
+In a __Doubly Linked List__, inserting a new node involves adjusting the _next_ and _prev_ pointers to adjacent nodes. 
 
 ```python3
-# Structure of a Doubly Linked List
+# Structure of a Doubly Linked List Node
 class Node:
     def __init__(self, data):
         self.data = data
@@ -269,7 +332,7 @@ class Node:
         self.next = None
 
 # Insertion at the Beginning
-def insert_at_beginning(head, data):
+def insertAtBeginning(head, data):
     new_node = Node(data)
     if head is None:
         head = new_node
@@ -280,7 +343,7 @@ def insert_at_beginning(head, data):
     return head
 
 # Insertion at the End
-def insert_at_end(head, data):
+def insertAtEnd(head, data):
     new_node = Node(data)
     if head is None:
         return new_node
@@ -293,10 +356,10 @@ def insert_at_end(head, data):
     return head
 
 # Insertion at a Specific Position
-def insert_at_position(head, data, position):
+def insertAtPosition(head, data, position):
     new_node = Node(data)
     if position == 0:
-        return insert_at_beginning(head, data)
+        return insertAtBeginning(head, data)
     
     temp = head
     for _ in range(position - 1):
@@ -335,13 +398,497 @@ def insert_at_position(head, data, position):
     </tr>
 </table>
 
-
-In a __Circular Linked List__, 
+In a __Circular Linked List__, the last node points back to the head. These lists can be either singly or doubly linked, but are most notable for having no nodes with a __None__ reference.
 
 ```python3
+# Structure of a Circular Singly Linked List Node
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+# Insertion at the Beginning
+def insertAtBeginning(head, data):
+    new_node = Node(data)
+    
+    if head is None:
+        new_node.next = new_node  # The list was empty, so the new node points to itself
+        return new_node
+    
+    # Find the last node
+    temp = head
+    while temp.next != head:
+        temp = temp.next
+    
+    # Insert the new node
+    new_node.next = head
+    temp.next = new_node
+    return new_node  # The new node becomes the new head
+
+# Insertion at the End
+def insertAtEnd(head, data):
+    new_node = Node(data)
+    
+    if head is None:
+        new_node.next = new_node  # The list was empty, so the new node points to itself
+        return new_node
+    
+    # Traverse to the last node
+    temp = head
+    while temp.next != head:
+        temp = temp.next
+    
+    # Insert the new node
+    temp.next = new_node
+    new_node.next = head
+    return head
+
+# Insertion at a Specific Position
+def insertAtPosition(head, data, position):
+    new_node = Node(data)
+    
+    if position == 0:
+        return insertAtBeginning(head, data)
+    
+    # Traverse to the node just before the desired position
+    temp = head
+    for _ in range(position - 1):
+        if temp.next == head:  # Position is out of bounds
+            raise Exception("Position out of bounds")
+        temp = temp.next
+    
+    # Insert the new node
+    new_node.next = temp.next
+    temp.next = new_node
+    
+    return head
 ```
 
+<table>
+    <tr>
+        <td>Insertion</td>
+        <td>Time Complexity</td>
+    </tr>
+    <tr>
+        <td>Beginning</td>
+        <td>O(n)</td>
+    </tr>
+    <tr>
+        <td>End</td>
+        <td>O(n)</td>
+    </tr>
+    <tr>
+        <td>Specific Position</td>
+        <td>O(n)</td>
+    </tr>
+</table>
+
+```python3
+# Structure of a Circular Doubly Linked List Node
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+
+# Insertion at the Beginning
+def insertAtBeginning(head):
+    new_node = Node(data)
+    
+    if head is None:  # Empty list
+        new_node.next = new_node
+        new_node.prev = new_node
+        return new_node
+    
+    # Find the tail (last node)
+    tail = head.prev
+    
+    # Insert the new node at the beginning
+    new_node.next = head
+    new_node.prev = tail
+    head.prev = new_node
+    tail.next = new_node
+    
+    return new_node  # The new node becomes the new head
+
+# Insertion at the End
+def insertAtEnd(head, data):
+    new_node = Node(data)
+    
+    if head is None:  # Empty list
+        new_node.next = new_node
+        new_node.prev = new_node
+        return new_node
+    
+    # Find the tail (last node)
+    tail = head.prev
+    
+    # Insert the new node at the end
+    new_node.next = head
+    new_node.prev = tail
+    tail.next = new_node
+    head.prev = new_node
+    
+    return head
+
+# Insertion at a Specific Position
+def insertAtPosition(head, data, position):
+    new_node = Node(data)
+    
+    # Insertion at the beginning
+    if position == 0:
+        return insertAtBeginning(head, data)
+    
+    temp = head
+    for _ in range(position - 1):
+        if temp.next == head:
+            raise Exception("Position out of bounds")
+        temp = temp.next
+    
+    # Insert the new node between temp and temp.next
+    new_node.next = temp.next
+    new_node.prev = temp
+    temp.next.prev = new_node
+    temp.next = new_node
+    
+    return head
+```
+
+<table>
+    <tr>
+        <td>Insertion</td>
+        <td>Time Complexity</td>
+    </tr>
+    <tr>
+        <td>Beginning</td>
+        <td>O(1)</td>
+    </tr>
+    <tr>
+        <td>End</td>
+        <td>O(1)</td>
+    </tr>
+    <tr>
+        <td>Specific Position</td>
+        <td>O(n)</td>
+    </tr>
+</table>
+
 ### Delete
+This is the operation used to remove a node from a list while maintaining the structure and integrity of the remaining list. Similar to insertion, this maintenance involves pointer manipulation. 
+
+In __Singly Linked Lists__, deletion is similar to insertion where only the _next_ pointer is managed, but instead of adding a node, we are simply removing a node.
+
+```python3
+# Structure of a Singly Linked List Node
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+# Deletion at the Beginning
+def deleteAtBeginning(head):
+    if head is None:
+        return None  # List is already empty
+    
+    return head.next  # Move the head to the next node
+
+# Deletion at the End
+def deleteAtEnd(head):
+    if head is None:
+        return None  # List is already empty
+    
+    if head.next is None:  # Only one node in the list
+        return None  # The list becomes empty after deletion
+    
+    temp = head
+    while temp.next.next:  # Traverse to the second-to-last node
+        temp = temp.next
+    
+    temp.next = None  # Remove the last node
+    return head
+
+# Deletion at a Specific Position
+def deleteAtPosition(head, position):
+    if head is None:
+        return None  # List is already empty
+    
+    if position == 0:  # Deletion at the beginning
+        return head.next
+    
+    temp = head
+    for _ in range(position - 1):
+        if temp.next is None:
+            raise Exception("Position out of bounds")  # Invalid position
+        temp = temp.next
+    
+    if temp.next is None:
+        raise Exception("Position out of bounds")  # Invalid position
+    
+    temp.next = temp.next.next  # Skip over the node to delete
+    return head
+```
+
+<table>
+    <tr>
+        <td>Deletion</td>
+        <td>Time Complexity</td>
+    </tr>
+    <tr>
+        <td>Beginning</td>
+        <td>O(1)</td>
+    </tr>
+    <tr>
+        <td>End</td>
+        <td>O(n)</td>
+    </tr>
+    <tr>
+        <td>Specific Position</td>
+        <td>O(n)</td>
+    </tr>
+</table>
+
+In a __Doubly Linked List__, deletion of a node also involves adjusting the _next_ and _prev_ pointers to adjacent nodes. 
+
+```python3
+# Structure of a Doubly Linked List Node
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+
+# Deletion at the Beginning
+def deleteAtBeginning(head):
+    if head is None:
+        return None  # List is empty, nothing to delete
+    
+    if head.next is None:  # Only one node
+        return None  # The list becomes empty after deletion
+    
+    head = head.next  # Move head to the next node
+    head.prev = None  # Set the new head's prev to None
+    
+    return head
+
+# Deletion at the End
+def deleteAtEnd(head):
+    if head is None:
+        return None  # List is empty
+    
+    if head.next is None:  # Only one node in the list
+        return None  # The list becomes empty after deletion
+    
+    temp = head
+    while temp.next:  # Traverse to the last node
+        temp = temp.next
+    
+    # temp is the last node
+    temp.prev.next = None  # Set the second-to-last node's next to None
+    
+    return head
+
+# Deletion at a Specific Position
+def deleteAtPposition(head, position):
+    if head is None:
+        return None  # List is empty
+    
+    if position == 0:  # Deletion at the beginning
+        return deleteAtBeginning(head)
+    
+    temp = head
+    for _ in range(position):
+        if temp.next is None:
+            raise Exception("Position out of bounds")  # Invalid position
+        temp = temp.next
+    
+    # Adjust the pointers of adjacent nodes
+    if temp.next is not None:
+        temp.next.prev = temp.prev
+    
+    temp.prev.next = temp.next
+    
+    return head
+```
+
+<table>
+    <tr>
+        <td>Deletion</td>
+        <td>Time Complexity</td>
+    </tr>
+    <tr>
+        <td>Beginning</td>
+        <td>O(1)</td>
+    </tr>
+    <tr>
+        <td>End (Tail Pointer)</td>
+        <td>O(1)</td>
+    </tr>
+    <tr>
+        <td>End (Traverse List)</td>
+        <td>O(n)</td>
+    </tr>
+    <tr>
+        <td>Specific Position</td>
+        <td>O(n)</td>
+    </tr>
+</table>
+
+In a __Circular Linked List__, deleting nodes is similar to the above linked lists but requires additional handling to maintain the circular nature of the list. 
+
+```python3
+# Structure of a Circular Singly Linked List Node
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+# Deletion at the Beginning
+def deleteAtBeginning(head):
+    if head is None:
+        return None  # List is empty
+    
+    if head.next == head:  # Only one node
+        return None  # The list becomes empty
+    
+    last = head
+    while last.next != head:  # Find the last node
+        last = last.next
+    
+    last.next = head.next  # Last node now points to the new head
+    head = head.next  # Move head to the next node
+    
+    return head
+
+# Deletion at the End
+def deleteAtEnd(head):
+    if head is None:
+        return None  # List is empty
+    
+    if head.next == head:  # Only one node
+        return None  # The list becomes empty
+    
+    temp = head
+    while temp.next.next != head:  # Traverse to the second-to-last node
+        temp = temp.next
+    
+    temp.next = head  # Second-to-last node points to the head
+    
+    return head
+
+# Deletion at a Specific Position
+def deleteAtPosition(head, position):
+    if head is None:
+        return None  # List is empty
+    
+    if position == 0:  # Deletion at the beginning
+        return delete_at_beginning(head)
+    
+    temp = head
+    for _ in range(position - 1):
+        if temp.next == head:  # Reached the end, invalid position
+            raise Exception("Position out of bounds")
+        temp = temp.next
+    
+    temp.next = temp.next.next  # Bypass the node at the position
+    
+    return head
+```
+
+<table>
+    <tr>
+        <td>Deletion</td>
+        <td>Time Complexity</td>
+    </tr>
+    <tr>
+        <td>Beginning</td>
+        <td>O(n) or O(1)</td>
+    </tr>
+    <tr>
+        <td>End</td>
+        <td>O(n)</td>
+    </tr>
+    <tr>
+        <td>Specific Position</td>
+        <td>O(n)</td>
+    </tr>
+</table>
+
+```python3
+# Structure of a Circular Singly Linked List Node
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+
+# Deletion at the Beginning
+def deleteAtBeginning(head):
+    if head is None:
+        return None  # List is empty
+    
+    if head.next == head:  # Only one node
+        return None  # The list becomes empty
+    
+    last = head.prev  # Last node
+    last.next = head.next  # Last node now points to new head
+    head.next.prev = last  # New head's prev points to last node
+    
+    head = head.next  # Move head to the next node
+    
+    return head
+
+# Deletion at the End
+def deleteAtEnd(head):
+    if head is None:
+        return None  # List is empty
+    
+    if head.next == head:  # Only one node
+        return None  # The list becomes empty
+    
+    last = head.prev  # Last node
+    last.prev.next = head  # Second-to-last node points to head
+    head.prev = last.prev  # Head's prev points to new last node
+    
+    return head
+
+# Deletion at a Specific Position
+def deleteAtPosition(head, position):
+    if head is None:
+        return None  # List is empty
+    
+    if position == 0:  # Deletion at the beginning
+        return delete_at_beginning(head)
+    
+    temp = head
+    for _ in range(position):
+        if temp.next == head:  # Invalid position
+            raise Exception("Position out of bounds")
+        temp = temp.next
+    
+    temp.prev.next = temp.next  # Adjust prev node's next
+    temp.next.prev = temp.prev  # Adjust next node's prev
+    
+    return head
+```
+
+<table>
+    <tr>
+        <td>Deletion</td>
+        <td>Time Complexity</td>
+    </tr>
+    <tr>
+        <td>Beginning</td>
+        <td>O(1)</td>
+    </tr>
+    <tr>
+        <td>End</td>
+        <td>O(1)</td>
+    </tr>
+    <tr>
+        <td>Specific Position</td>
+        <td>O(n)</td>
+    </tr>
+</table>
 
 [^1]:[GeekForGeeks](https://www.geeksforgeeks.org/linked-list-data-structure/)
 [^2]:[Images from W3Schools](https://www.w3schools.com/dsa/dsa_data_linkedlists_types.php)
