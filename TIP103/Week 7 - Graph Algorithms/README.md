@@ -40,8 +40,8 @@ class Graph:
 ```
 <table>
     <tr>
+        <td>Type</td>
         <td>Complexity</td>
-        <td>Big-O</td>
     </tr>
     <tr>
         <td>Time</td>
