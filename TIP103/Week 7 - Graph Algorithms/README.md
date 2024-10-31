@@ -139,7 +139,7 @@ Topological Order: [5, 4, 2, 3, 1, 0]
 </table>
 
 # Disjoint Set Union (Union Find)
-This is a data structure that efficiently handles the union and find operations on a collection of disjoint (non-overlapping) sets. This structure is useful inspecting connectivity in graph algorithms. These operations include initializing a parent and rank arrays, implementing a union operation, and implementing a find operation. 
+This is a data structure that efficiently handles the union and find operations on a collection of disjoint (non-overlapping) sets. This structure is useful for inspecting connectivity in graph algorithms. These operations include initializing a parent and rank arrays, implementing a union operation, and implementing a find operation. 
 
 ```python3
 class UnionFind:
