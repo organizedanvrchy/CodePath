@@ -139,7 +139,41 @@ Topological Order: [5, 4, 2, 3, 1, 0]
 </table>
 
 # Disjoint Set Union (Union Find)
+This is a data structure that efficiently handles the union and find operations on a collection of disjoint (non-overlapping) sets. This structure is useful inspecting connectivity in graph algorithms. These operations include initializing a parent and rank arrays, implementing a union operation, and implementing a find operation. 
 
+```python3
+class UnionFind:
+    def __init__(self, n):
+        # Initialize each node to be its own parent (self loop) and rank of 0
+        self.parent = list(range(n))
+        self.rank = [0] * n
+
+    def find(self, x):
+        # Path compression: point x directly to its root to flatten the structure
+        if self.parent[x] != x:
+            self.parent[x] = self.find(self.parent[x])
+        return self.parent[x]
+
+    def union(self, x, y):
+        # Find roots of the elements
+        rootX = self.find(x)
+        rootY = self.find(y)
+
+        # Elements are already in the same set
+        if rootX == rootY:
+            return False
+        
+        # Union by rank: attach the smaller tree under the larger tree
+        if self.rank[rootX] > self.rank[rootY]:
+            self.parent[rootY] = rootX
+        elif self.rank[rootX] < self.rank[rootY]:
+            self.parent[rootX] = rootY
+        else:
+            self.parent[rootY] = rootX
+            self.rank[rootX] += 1
+
+        return True
+```
 # Minimum Spanning Trees
 ## Kruskal's Algorithm
 ## Prim's Algorithm
