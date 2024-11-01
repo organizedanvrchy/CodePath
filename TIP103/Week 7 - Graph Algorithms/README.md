@@ -142,18 +142,23 @@ Topological Order: [5, 4, 2, 3, 1, 0]
 This is a data structure that efficiently handles the union and find operations on a collection of disjoint (non-overlapping) sets. This structure is useful for inspecting connectivity in graph algorithms. These operations include initializing a parent and rank arrays, implementing a union operation, and implementing a find operation. 
 
 ```python3
-# Naive Implementation
 parent = [i for i in range(len(nodes))]
+rank = [0] * len(nodes)
 
 def find(x):
-    while parent[x] != x:
-    x = parent[x]
-    return x
+    if parent[x] != x:
+        parent[x] = find(parent[x])
+    return parent[x]
 
-def union(x, y):
+def union(x,y):
     xroot, yroot = find(x), find(y)
     if xroot != yroot:
-    parent[xroot] = yroot
+        if rank[xroot] > rank[yroot]:
+            parent[yroot] = xroot
+    else:
+        parent[xroot] = parent[yroot]
+         if rank[xroot] == rank[yroot]:
+             rank[yroot] += 1
 ```
 
 ```python3
