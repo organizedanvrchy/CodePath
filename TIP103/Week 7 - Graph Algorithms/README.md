@@ -146,14 +146,14 @@ This is a data structure that efficiently handles the union and find operations 
 parent = [i for i in range(len(nodes))]
 
 def find(x):
- while parent[x] != x:
- x = parent[x]
- return x
+    while parent[x] != x:
+    x = parent[x]
+    return x
 
 def union(x, y):
- xroot, yroot = find(x), find(y)
- if xroot != yroot:
- parent[xroot] = yroot
+    xroot, yroot = find(x), find(y)
+    if xroot != yroot:
+    parent[xroot] = yroot
 ```
 
 ```python3
