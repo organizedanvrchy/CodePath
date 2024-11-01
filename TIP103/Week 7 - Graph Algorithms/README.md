@@ -142,6 +142,7 @@ Topological Order: [5, 4, 2, 3, 1, 0]
 This is a data structure that efficiently handles the union and find operations on a collection of disjoint (non-overlapping) sets. This structure is useful for inspecting connectivity in graph algorithms. These operations include initializing a parent and rank arrays, implementing a union operation, and implementing a find operation. 
 
 ```python3
+# Union by Rank and Path Compression
 parent = [i for i in range(len(nodes))]
 rank = [0] * len(nodes)
 
@@ -162,6 +163,7 @@ def union(x,y):
 ```
 
 ```python3
+# Alternative Class Creation
 class UnionFind:
     def __init__(self, n):
         # Initialize each node to be its own parent (self loop) and rank of 0
