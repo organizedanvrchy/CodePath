@@ -34,5 +34,8 @@ This involves selecting the maximum number of non-overlapping activities from a 
 ### Huffman Coding[^2]
 This is the construction of an optimal binary prefix code to compress data, where more frequent characters have shorter codes. 
 
+### Session #2
+[Problem 1: Rabbits in Forest](https://github.com/organizedanvrchy/LeetCode/blob/main/Rabbits_in_Forest.py)<br>
+
 [^1]: [GeeksForGeeks - Activity Selection](https://www.geeksforgeeks.org/activity-selection-problem-greedy-algo-1/)
 [^2]: [GeeksForGeeks - Huffman Coding](https://www.geeksforgeeks.org/activity-selection-problem-greedy-algo-1/)
