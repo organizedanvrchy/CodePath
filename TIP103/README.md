@@ -16,15 +16,15 @@ This repository contains information that I have gathered and problems that I ha
     <td><a href="https://github.com/organizedanvrchy/CodePath/tree/main/TIP103/Week%202%20-%20Linked%20Lists%20and%20Strings%20%26%20Arrays">Linked Lists and Strings/Arrays</td>
   </tr>
   <tr>
-    <td>Week 3</td>
+    <td>*Week 3</td>
     <td>Strings/Arrays continued, Hash Tables, and Heaps</td>
   </tr>
   <tr>
-    <td>Week 4</td>
+    <td>*Week 4</td>
     <td>Review</td>
   </tr>
   <tr>
-    <td>Week 5</td>
+    <td>*Week 5</td>
     <td>Stacks and Queues, and Trees</td>
   </tr>
   <tr>
