@@ -13,7 +13,7 @@ Strings are a sequence of characters stored in contiguous memory locations and c
 > When using a language that supports ASCII (such as Python), the ord() function can be used to get the integer value that the character is mapped to and chr() can be used to get the character that the integer value is mapped to. 
 
 ## Common Escape Sequences
-Escape sequences are special character sequences that are non-printable. They usually start with a "\". Some frequent examples include:
+Escape sequences are special character sequences that are non-printable. They usually start with a ""\"". Some frequent examples include:
 1. __\\n__ - Newline
 2. __\\t__ - Tab
 3. __\\\\__ - Backslash
