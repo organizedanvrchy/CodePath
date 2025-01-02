@@ -903,7 +903,7 @@ def deleteAtPosition(head, position):
 ### Session #2
 [Problem 1: Shifting Letters](https://github.com/organizedanvrchy/LeetCode/blob/main/Shifting_Letters.py)<br>
 [Problem 2: Set Matrix Zeroes](https://github.com/organizedanvrchy/LeetCode/blob/main/Set_Matrix_Zeroes.py)<br>
-[Problem 3 (Bonus): Longest Repeated Character Replacement](https://github.com/organizedanvrchy/LeetCode/blob/main/Longest_Repeating_Character_Replacement.py)
+[Problem 3 (Bonus): Longest Repeated Character Replacement](https://github.com/organizedanvrchy/LeetCode/blob/main/Longest_Repeating_Character_Replacement.py)<br>
 [Problem 4 (Bonus): Group Anagrams](https://github.com/organizedanvrchy/LeetCode/blob/main/Group_Anagrams.py)
 
 [^1]:[GeekForGeeks](https://www.geeksforgeeks.org/linked-list-data-structure/)
