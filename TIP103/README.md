@@ -24,7 +24,7 @@ This repository contains information that I have gathered and problems that I ha
     <td>Review</td>
   </tr>
   <tr>
-    <td>*Week 5</td>
+    <td>Week 5</td>
     <td>Stacks and Queues, and Trees</td>
   </tr>
   <tr>
