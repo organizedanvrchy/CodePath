@@ -890,5 +890,21 @@ def deleteAtPosition(head, position):
     </tr>
 </table>
 
+## Practice Questions
+### Warmups
+[Problem 1: Linked List Cycle](https://github.com/organizedanvrchy/LeetCode/blob/main/Linked_List_Cycle.py)<br>
+[Problem 2: Delete Node in a Linked List](https://github.com/organizedanvrchy/LeetCode/blob/main/Delete_Node_in_a_Linked_List.py)
+
+### Session #1
+[Problem 1: Rotate List](https://github.com/organizedanvrchy/LeetCode/blob/main/Rotate_List.py)<br>
+[Problem 2: Swap Nodes in Pairs](https://github.com/organizedanvrchy/LeetCode/blob/main/Swap_Nodes_in_Pairs.py)<br>
+[Problem 3: Remove Nth Node from List](https://github.com/organizedanvrchy/LeetCode/blob/main/Remove_Nth_Node_From_End_of_List.py)
+
+### Session #2
+[Problem 1: Shifting Letters](https://github.com/organizedanvrchy/LeetCode/blob/main/Shifting_Letters.py)<br>
+[Problem 2: Set Matrix Zeroes](https://github.com/organizedanvrchy/LeetCode/blob/main/Set_Matrix_Zeroes.py)<br>
+[Problem 3 (Bonus): Longest Repeated Character Replacement](https://github.com/organizedanvrchy/LeetCode/blob/main/Longest_Repeating_Character_Replacement.py)
+[Problem 4 (Bonus): Group Anagrams](https://github.com/organizedanvrchy/LeetCode/blob/main/Group_Anagrams.py)
+
 [^1]:[GeekForGeeks](https://www.geeksforgeeks.org/linked-list-data-structure/)
 [^2]:[Images from W3Schools](https://www.w3schools.com/dsa/dsa_data_linkedlists_types.php)
