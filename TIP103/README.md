@@ -17,7 +17,7 @@ This repository contains information that I have gathered and problems that I ha
   </tr>
   <tr>
     <td>Week 3</td>
-    <td>Strings/Arrays continued, Hash Tables, and Heaps</td>
+    <td><a href="https://github.com/organizedanvrchy/CodePath/tree/main/TIP103/Week%203%20-%20Strings%20%26%20Arrays%20continued%2C%20Hash%20Tables%2C%20and%20Heaps">Strings/Arrays continued, Hash Tables, and Heaps</td>
   </tr>
   <tr>
     <td>*Week 4</td>
@@ -29,15 +29,15 @@ This repository contains information that I have gathered and problems that I ha
   </tr>
   <tr>
     <td>Week 6</td>
-    <td>Intro to Graphs and Graph Traversals</td>
+    <td><a href="https://github.com/organizedanvrchy/CodePath/tree/main/TIP103/Week%206%20-%20Intro%20to%20Graphs%20and%20Graph%20Traversals">Intro to Graphs and Graph Traversals</td>
   </tr>
   <tr>
     <td>Week 7</td>
-    <td>Graphs Algorithms</td>
+    <td><a href="https://github.com/organizedanvrchy/CodePath/tree/main/TIP103/Week%207%20-%20Graph%20Algorithms">Graphs Algorithms</td>
   </tr>
   <tr>
     <td>Week 8</td>
-    <td>Greedy Algorithms</td>
+    <td><a href="https://github.com/organizedanvrchy/CodePath/tree/main/TIP103/Week%208%20-%20Greedy%20Algorithms">Greedy Algorithms</td>
   </tr>
   <tr>
     <td>Week 9</td>
