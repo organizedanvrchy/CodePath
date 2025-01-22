@@ -1,6 +1,6 @@
 # Stacks, Queues, and Trees
 
-## Stack
+## Stacks
 ### Definition
 A linear data structure that follows the **LIFO (Last In, First Out)** principle.
 
@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
 ---
 
-## Queue
+## Queues
 ### Definition
 A linear data structure that follows the **FIFO (First In, First Out)** principle.
 
