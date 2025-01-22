@@ -211,6 +211,8 @@ This algorithm solves the all-pairs shortest path problem for weighted graphs wi
 ### Kruskal's and Prim's Algorithms[^3]
 These algorithms are used for Minimum Spanning Trees to find a subset of edges that form a tree connecting all vertices with the minimum total edge weight. Kruskal's algorithm takes O(ElogE) time while Prim's algorithm takes O(V<sup>2</sup>) or O((V + E)logV) with priority queues.
 
+---
+
 ## Practice Questions
 ### Warmups
 [Problem 1: Number of Islands](https://github.com/organizedanvrchy/LeetCode/blob/main/Number_of_Islands.py)<br>
