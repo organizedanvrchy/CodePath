@@ -228,6 +228,114 @@ A hierarchical data structure consisting of nodes connected by edges. It has one
 - Networking (routing tables).
 - Artificial intelligence (decision trees).
 
+### Example
+```python3
+# Binary Tree Node Class
+class Node:
+    def __init__(self, key):
+        self.left = None
+        self.right = None
+        self.value = key
+
+# Binary Tree Class
+class BinaryTree:
+    def __init__(self):
+        self.root = None
+
+    def insert(self, key):
+        """Insert a new node with the given key into the binary tree."""
+        if self.root is None:
+            self.root = Node(key)
+        else:
+            self._insert(self.root, key)
+
+    def _insert(self, node, key):
+        """Helper function to recursively insert a node."""
+        if key < node.value:
+            if node.left is None:
+                node.left = Node(key)
+            else:
+                self._insert(node.left, key)
+        elif key > node.value:
+            if node.right is None:
+                node.right = Node(key)
+            else:
+                self._insert(node.right, key)
+
+    def search(self, key):
+        """Search for a node with the given key."""
+        return self._search(self.root, key)
+
+    def _search(self, node, key):
+        """Helper function to recursively search for a node."""
+        if node is None or node.value == key:
+            return node
+        if key < node.value:
+            return self._search(node.left, key)
+        return self._search(node.right, key)
+
+    def inorder(self):
+        """In-order traversal of the binary tree."""
+        result = []
+        self._inorder(self.root, result)
+        return result
+
+    def _inorder(self, node, result):
+        """Helper function for in-order traversal."""
+        if node:
+            self._inorder(node.left, result)
+            result.append(node.value)
+            self._inorder(node.right, result)
+
+    def preorder(self):
+        """Pre-order traversal of the binary tree."""
+        result = []
+        self._preorder(self.root, result)
+        return result
+
+    def _preorder(self, node, result):
+        """Helper function for pre-order traversal."""
+        if node:
+            result.append(node.value)
+            self._preorder(node.left, result)
+            self._preorder(node.right, result)
+
+    def postorder(self):
+        """Post-order traversal of the binary tree."""
+        result = []
+        self._postorder(self.root, result)
+        return result
+
+    def _postorder(self, node, result):
+        """Helper function for post-order traversal."""
+        if node:
+            self._postorder(node.left, result)
+            self._postorder(node.right, result)
+            result.append(node.value)
+
+# Example usage
+if __name__ == "__main__":
+    tree = BinaryTree()
+    tree.insert(50)
+    tree.insert(30)
+    tree.insert(20)
+    tree.insert(40)
+    tree.insert(70)
+    tree.insert(60)
+    tree.insert(80)
+
+    print("In-order traversal:", tree.inorder())  # Output: [20, 30, 40, 50, 60, 70, 80]
+    print("Pre-order traversal:", tree.preorder())  # Output: [50, 30, 20, 40, 70, 60, 80]
+    print("Post-order traversal:", tree.postorder())  # Output: [20, 40, 30, 60, 80, 70, 50]
+
+    # Searching for a value
+    search_result = tree.search(40)
+    if search_result:
+        print("Found node with value:", search_result.value)  # Output: Found node with value: 40
+    else:
+        print("Node not found")
+```
+
 ---
 
 ## Comparison Table
@@ -240,6 +348,3 @@ A hierarchical data structure consisting of nodes connected by edges. It has one
 | **Applications**   | Call stack, undo | BFS, scheduling  | Searching, sorting, AI   |
 
 ---
-
-Feel free to explore further or contribute additional insights and examples! 🚀
-
