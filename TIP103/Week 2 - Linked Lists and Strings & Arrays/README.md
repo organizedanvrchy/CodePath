@@ -62,6 +62,8 @@ for char in string:
     print(char, end=" ")  # Output: H e l l o 
 ```
 
+---
+
 # Arrays
 Arrays are fundamental and linear data structures that are used to store a collection of same data type elements in contiguous memory locations. Each element in an array is indexed (starting from 0) which allows for quick access and modification in most cases. Arrays are generally of fixed sized, but some languages support dynamically sized arrays using underlying fixed sized arrays (generally involving doubling the array size before it is full). In Python, arrays are implemented as lists, allowing for dynamic sizing, whereas in other languages (such as C and Java) arrays are declared with a specific type and size. 
 
@@ -120,6 +122,8 @@ matrix = [
 ]
 print(matrix[1][2])  # Accesses the element in the second row, third column (Output: 6)
 ```
+
+---
 
 # Linked Lists
 Linked Lists are fundamental data structures for storing collections of elements. Linked Lists allow for more efficient insertion and deletion operations when compared to arrays since they consist of nodes that point to the next node in a sequence and do not use contiguous blocks or memory. Linked Lists also have dynamic size, allowing for growing and shrinking as necessary. However, these lists have the disadvantage of __no backward traversals__ and __no direct access__. These lists also require additional memory for the pointers and only offer sequential access to nodes (which might be slower than random access in arrays).[^1]
@@ -889,6 +893,8 @@ def deleteAtPosition(head, position):
         <td>O(n)</td>
     </tr>
 </table>
+
+---
 
 ## Practice Questions
 ### Warmups
