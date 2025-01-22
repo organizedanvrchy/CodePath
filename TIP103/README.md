@@ -25,7 +25,7 @@ This repository contains information that I have gathered and problems that I ha
   </tr>
   <tr>
     <td>Week 5</td>
-    <td>Stacks and Queues, and Trees</td>
+    <td><a href="https://github.com/organizedanvrchy/CodePath/tree/main/TIP103/Week%205%20-%20Stacks%20and%20Queues%2C%20and%20Trees">Stacks and Queues, and Trees</td>
   </tr>
   <tr>
     <td>Week 6</td>
