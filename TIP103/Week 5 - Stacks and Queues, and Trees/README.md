@@ -348,3 +348,25 @@ if __name__ == "__main__":
 | **Applications**   | Call stack, undo | BFS, scheduling  | Searching, sorting, AI   |
 
 ---
+
+## Practice Questions
+### Warmups
+[Problem 1: Invert Binary Tree](https://github.com/organizedanvrchy/LeetCode/blob/main/Invert_Binary_Tree.py)<br>
+[Problem 2: Symmetric tree](https://github.com/organizedanvrchy/LeetCode/blob/main/Symmetric_Tree.py)<br>
+[Problem 3: Balanced Binary Tree](https://github.com/organizedanvrchy/LeetCode/blob/main/Balanced_Binary_Tree.py)<br>
+
+### Session #1
+[Problem 1: Number of Recent Calls](https://github.com/organizedanvrchy/LeetCode/blob/main/Number_of_Recent_Calls.py)<br>
+[Problem 2: Implement Queue using Stacks](https://github.com/organizedanvrchy/LeetCode/blob/main/Implement_Queue_using_Stacks.py)<br>
+[Problem 3: Validate Stack Sequences](https://github.com/organizedanvrchy/LeetCode/blob/main/Validate_Stack_Sequences.py)<br>
+[Problem 4: Asteroid Collision](https://github.com/organizedanvrchy/LeetCode/blob/main/Asteroid_Collision.py)<br>
+[Problem 5: Basic Calculator](https://github.com/organizedanvrchy/LeetCode/blob/main/Basic_Calculator.py)<br>
+
+### Session #2
+[Problem 1: Minimum Depth of Binary Tree](https://github.com/organizedanvrchy/LeetCode/blob/main/Minimum_Depth_of_Binary_Tree.py)<br>
+[Problem 2: Binary Tree Pruning](https://github.com/organizedanvrchy/LeetCode/blob/main/Binary_Tree_Pruning.py)<br>
+[Problem 3: Vertical order traversal of a Binary Tree](https://github.com/organizedanvrchy/CodePath/blob/main/Vertical_Tree_Traversal.py)<br>
+[Problem 4: Convert Sorted Array to Binary Search Tree](https://github.com/organizedanvrchy/LeetCode/blob/main/Convert_Sorted_Array_to_Binary_Search_Tree.py)<br>
+[Problem 5: Most Frequent Subtree Sum](https://github.com/organizedanvrchy/LeetCode/blob/main/Most_Frequent_Subtree_Sum.py)<br>
+[Problem 6: Find Largest Value in Each Tree Row](https://github.com/organizedanvrchy/LeetCode/blob/main/Find_Largest_Value_in_Each_Tree_Row.py)<br>
+
