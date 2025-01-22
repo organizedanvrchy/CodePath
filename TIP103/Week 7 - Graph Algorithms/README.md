@@ -450,7 +450,7 @@ for row in distances:
 
 ## Practice Questions
 ### Warmups
-[Problem 1: Number of Islands](https://github.com/organizedanvrchy/LeetCode/blob/main/Number_of_Islands.py)<br>
+[Problem 1: Find All Possible Recipes from Given Supplies](https://github.com/organizedanvrchy/LeetCode/blob/main/Find_All_Possible_Recipes_from_Given_Supplies.py)<br>
 
 ### Session #1
 [Problem 1: 01 Matrix](https://github.com/organizedanvrchy/LeetCode/blob/main/01_Matrix.py)<br>
