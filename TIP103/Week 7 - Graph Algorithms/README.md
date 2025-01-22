@@ -138,6 +138,8 @@ Topological Order: [5, 4, 2, 3, 1, 0]
     </tr>
 </table>
 
+---
+
 # Disjoint Set Union (Union Find)
 This is a data structure that efficiently handles the union and find operations on a collection of disjoint (non-overlapping) sets. This structure is useful for inspecting connectivity in graph algorithms. These operations include initializing a parent and rank arrays, implementing a union operation, and implementing a find operation. 
 
@@ -196,9 +198,127 @@ class UnionFind:
 
         return True
 ```
-# Minimum Spanning Trees
+
+---
+
+# Minimum Spanning Trees (MST)
+A **Minimum Spanning Tree (MST)** of a connected, undirected graph is a subset of the edges that connects all the vertices in the graph, without any cycles, and with the minimum possible total edge weight. 
+
 ## Kruskal's Algorithm
+**Kruskal's Algorithm** is a greedy algorithm that finds the minimum spanning tree by sorting all the edges in non-decreasing order of their weights and adding them one by one to the MST, ensuring that no cycles are formed. It uses a **Union-Find (Disjoint Set Union, DSU)** data structure to check and manage the connected components.
+
+### Steps of Kruskal's Algorithm:
+1. **Sort** all edges in the graph in increasing order of their weights.
+2. Initialize an empty MST.
+3. For each edge in the sorted list:
+   - If the edge connects two different components (checked using Union-Find), add the edge to the MST.
+   - Otherwise, discard the edge.
+4. Repeat until the MST contains `V-1` edges (where `V` is the number of vertices).
+
+```python3
+class DisjointSet:
+    def __init__(self, n):
+        self.parent = list(range(n))
+        self.rank = [0] * n
+
+    def find(self, x):
+        if self.parent[x] != x:
+            self.parent[x] = self.find(self.parent[x])
+        return self.parent[x]
+
+    def union(self, x, y):
+        rootX = self.find(x)
+        rootY = self.find(y)
+
+        if rootX != rootY:
+            if self.rank[rootX] > self.rank[rootY]:
+                self.parent[rootY] = rootX
+            elif self.rank[rootX] < self.rank[rootY]:
+                self.parent[rootX] = rootY
+            else:
+                self.parent[rootY] = rootX
+                self.rank[rootX] += 1
+
+def kruskal(n, edges):
+    mst = []
+    disjoint_set = DisjointSet(n)
+    
+    # Sort the edges by weight
+    edges.sort(key=lambda x: x[2])
+    
+    for u, v, weight in edges:
+        if disjoint_set.find(u) != disjoint_set.find(v):
+            mst.append((u, v, weight))
+            disjoint_set.union(u, v)
+    
+    return mst
+
+# Example Usage
+edges = [(0, 1, 10), (0, 2, 6), (0, 3, 5), (1, 3, 15), (2, 3, 4)]
+n = 4  # Number of vertices
+mst = kruskal(n, edges)
+print("Edges in MST:", mst)
+```
+
 ## Prim's Algorithm
+**Prim's Algorithm** is another greedy algorithm that finds an MST by growing the tree from an arbitrary starting vertex. It starts with a single vertex and repeatedly adds the smallest edge that connects a vertex in the tree to a vertex outside the tree.
+
+### Steps of Prim's Algorithm:
+1. Initialize the MST with an arbitrary starting vertex.
+2. Use a priority queue (min-heap) to keep track of the edges connecting the MST to the rest of the graph.
+3. At each step, add the edge with the smallest weight that connects a vertex in the MST to a vertex outside it.
+4. Repeat until the MST contains all the vertices.
+
+```python3
+import heapq
+
+def prim(n, edges):
+    adj_list = {i: [] for i in range(n)}
+    for u, v, weight in edges:
+        adj_list[u].append((v, weight))
+        adj_list[v].append((u, weight))
+    
+    # Initialize variables
+    mst = []
+    visited = [False] * n
+    min_heap = [(0, 0)]  # (weight, vertex) starting from vertex 0
+    
+    while min_heap:
+        weight, u = heapq.heappop(min_heap)
+        
+        if visited[u]:
+            continue
+        
+        visited[u] = True
+        if weight > 0:  # Skip the first 0-weight edge (starting point)
+            mst.append((prev, u, weight))
+        
+        for v, edge_weight in adj_list[u]:
+            if not visited[v]:
+                heapq.heappush(min_heap, (edge_weight, v))
+                prev = u
+    
+    return mst
+
+# Example Usage
+edges = [(0, 1, 10), (0, 2, 6), (0, 3, 5), (1, 3, 15), (2, 3, 4)]
+n = 4  # Number of vertices
+mst = prim(n, edges)
+print("Edges in MST:", mst)
+```
+
+## Comparison of Kruskal's and Prim's Algorithms
+
+| **Property**              | **Kruskal's Algorithm**                                | **Prim's Algorithm**                                  |
+|---------------------------|--------------------------------------------------------|-------------------------------------------------------|
+| **Type of Approach**       | Greedy (edge-based)                                   | Greedy (vertex-based)                                 |
+| **Data Structure**         | Union-Find (Disjoint Set Union)                       | Priority Queue (Min-Heap)                             |
+| **Time Complexity**        | O(E log E) or O(E log V)                              | O(E log V) (using Min-Heap)                           |
+| **Best For**               | Sparse graphs (many edges but few vertices)           | Dense graphs (many vertices and edges)                |
+| **Edge Sorting**           | Requires sorting of edges initially                   | No need for sorting, operates on edges in a priority queue |
+
+
+---
 
 # Shortest Path
 ## Bellman Ford's Algorithm
