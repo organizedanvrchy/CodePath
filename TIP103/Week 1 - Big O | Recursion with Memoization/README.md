@@ -40,6 +40,8 @@ This notation is most often used when describing the time and space complexities
 > [!NOTE]
 > Images and further explanations can be found at GeeksForGeeks (Link in footnotes)
 
+---
+
 # Recursion with Memoization
 ## Recursion
 This is when a function calls itself directly or indirectly for the purpose of breaking a component down into smaller components (to solve a problem). Recursion usually allows for simple and elegant code but can often be less efficient than iterative solutions, consume stack space, and perform redudant calculations.[^2] Recursive solutions are generally composed of __3__ key components:
@@ -85,6 +87,9 @@ def fibonacci_memo(n, memo={}):
     memo[n] = fibonacci_memo(n - 1, memo) + fibonacci_memo(n - 2, memo)  # Store result
     return memo[n]
 ```
+
+---
+
 ## Practice Questions
 ### Warmups
 [Problem 1: Add Two Numbers](https://github.com/organizedanvrchy/LeetCode/blob/main/Add_Two_Numbers.py)<br>
