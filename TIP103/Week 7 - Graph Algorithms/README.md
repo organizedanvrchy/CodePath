@@ -320,7 +320,145 @@ print("Edges in MST:", mst)
 
 ---
 
-# Shortest Path
-## Bellman Ford's Algorithm
+# Shortest Path Algorithms
+Shortest path algorithms are used to find the shortest path between nodes in a graph, which may represent, for example, road networks, communication networks, or social networks. This section provides brief descriptions of three well-known algorithms for solving the shortest path problem:
+
+- **Bellman-Ford's Algorithm**
+- **Dijkstra's Algorithm**
+- **Floyd-Warshall's Algorithm**
+
+## Bellman-Ford's Algorithm
+**Bellman-Ford's Algorithm** is an algorithm for finding the shortest paths from a single source vertex to all other vertices in a graph. It works even when the graph has negative weight edges, and it can also detect negative weight cycles. The algorithm works by relaxing all the edges **V-1** times (where `V` is the number of vertices).
+
+### Steps:
+1. Initialize the distances to all vertices as infinity, except for the source vertex which is set to 0.
+2. Relax all edges `V-1` times.
+3. After `V-1` relaxations, check for negative-weight cycles by relaxing the edges once more.
+
+```python3
+def bellman_ford(graph, V, start):
+    distances = [float("inf")] * V
+    distances[start] = 0
+    
+    # Relax all edges V-1 times
+    for _ in range(V - 1):
+        for u, v, weight in graph:
+            if distances[u] + weight < distances[v]:
+                distances[v] = distances[u] + weight
+    
+    # Check for negative weight cycles
+    for u, v, weight in graph:
+        if distances[u] + weight < distances[v]:
+            print("Graph contains negative weight cycle")
+            return None
+    
+    return distances
+
+# Example usage
+graph = [(0, 1, -1), (0, 2, 4), (1, 2, 3), (1, 3, 2), (1, 4, 2), (3, 2, 5), (3, 4, -3), (4, 3, 3)]
+V = 5  # Number of vertices
+start = 0  # Source vertex
+distances = bellman_ford(graph, V, start)
+print("Shortest distances from source:", distances)
+```
+
 ## Dikstra's Algorithm
+**Dijkstra's Algorithm** is a greedy algorithm that solves the single-source shortest path problem for a graph with non-negative edge weights. It selects the vertex with the smallest tentative distance, updates the distances of its adjacent vertices, and repeats this process until all vertices have been visited.
+
+### Steps:
+1. Initialize the distances to all vertices as infinity, except for the source vertex which is set to 0.
+2. Use a priority queue (min-heap) to select the vertex with the smallest tentative distance.
+3. Update the distances to the neighboring vertices of the selected vertex.
+4. Repeat the process until all vertices are processed.
+
+```python3
+import heapq
+
+def dijkstra(graph, V, start):
+    distances = [float("inf")] * V
+    distances[start] = 0
+    pq = [(0, start)]  # Priority queue: (distance, vertex)
+    
+    while pq:
+        current_distance, u = heapq.heappop(pq)
+        
+        if current_distance > distances[u]:
+            continue
+        
+        for v, weight in graph[u]:
+            distance = current_distance + weight
+            if distance < distances[v]:
+                distances[v] = distance
+                heapq.heappush(pq, (distance, v))
+    
+    return distances
+
+# Example usage
+graph = {0: [(1, -1), (2, 4)], 1: [(2, 3), (3, 2), (4, 2)], 2: [(3, 5)], 3: [(2, 5), (4, -3)], 4: [(3, 3)]}
+V = 5  # Number of vertices
+start = 0  # Source vertex
+distances = dijkstra(graph, V, start)
+print("Shortest distances from source:", distances)
+```
+
 ## Floyd-Warshall's Algorithm
+**Floyd-Warshall's Algorithm** is an algorithm for finding shortest paths between all pairs of vertices in a graph. It can handle negative weight edges, but does not work for graphs with negative weight cycles. It uses dynamic programming to compute the shortest path between each pair of vertices.
+
+### Steps:
+1. Initialize the distance matrix with edge weights.
+2. For each vertex, update the matrix to reflect the shortest path between all pairs of vertices by considering each vertex as an intermediate point.
+3. Repeat the process for all vertices
+
+```python3
+def floyd_warshall(graph, V):
+    # Initialize distance matrix
+    dist = [[float("inf")] * V for _ in range(V)]
+    
+    for u in range(V):
+        dist[u][u] = 0
+    
+    for u, v, weight in graph:
+        dist[u][v] = weight
+    
+    # Floyd-Warshall algorithm
+    for k in range(V):
+        for i in range(V):
+            for j in range(V):
+                if dist[i][j] > dist[i][k] + dist[k][j]:
+                    dist[i][j] = dist[i][k] + dist[k][j]
+    
+    return dist
+
+# Example usage
+graph = [(0, 1, -1), (0, 2, 4), (1, 2, 3), (1, 3, 2), (1, 4, 2), (3, 2, 5), (3, 4, -3), (4, 3, 3)]
+V = 5  # Number of vertices
+distances = floyd_warshall(graph, V)
+print("Shortest distance matrix:")
+for row in distances:
+    print(row)
+```
+
+## Summary of Algorithms
+
+| **Algorithm**      | **Time Complexity**         | **Graph Type**                              | **Handles Negative Weights**  | **Handles Negative Cycles**  |
+|--------------------|-----------------------------|---------------------------------------------|-------------------------------|------------------------------|
+| **Bellman-Ford**    | O(V * E)                    | Works for both dense and sparse graphs      | Yes                           | Yes                          |
+| **Dijkstra**        | O((V + E) log V)            | Works only for graphs with non-negative weights | No                            | No                           |
+| **Floyd-Warshall**  | O(V^3)                      | All-pairs shortest path problem             | Yes                           | No                           |
+
+---
+
+## Practice Questions
+### Warmups
+[Problem 1: Number of Arithmetic Triplets](https://github.com/organizedanvrchy/LeetCode/blob/main/Number_of_Arithmetic_Triplets.py)<br>
+
+### Session #1
+[Problem 1: Container With Most Water](https://github.com/organizedanvrchy/LeetCode/blob/main/Container_With_Most_Water.py)<br>
+[Problem 2: Valid Palindrome](https://github.com/organizedanvrchy/LeetCode/blob/main/Valid_Palindrome.py)<br>
+[Problem 3: 3Sum](https://github.com/organizedanvrchy/LeetCode/blob/main/3Sum.py)<br>
+
+### Session #2
+[Problem 1: Task Scheduler](https://github.com/organizedanvrchy/LeetCode/blob/main/Task_Scheduler.py)<br>
+[Problem 2: Brick Wall](https://github.com/organizedanvrchy/LeetCode/blob/main/Brick_Wall.py)<br>
+[Problem 3: Find a Celebrity](https://github.com/organizedanvrchy/LeetCode/blob/main/Find_a_Celebrity.py)
+
