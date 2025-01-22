@@ -97,3 +97,16 @@ print("After Heapify:", unsorted_list)  # Output will be a valid min-heap
 
 ---
 
+## Practice Questions
+### Warmups
+[Problem 1: Number of Arithmetic Triplets](https://github.com/organizedanvrchy/LeetCode/blob/main/Number_of_Arithmetic_Triplets.py)<br>
+
+### Session #1
+[Problem 1: Container With Most Water](https://github.com/organizedanvrchy/LeetCode/blob/main/Container_With_Most_Water.py)<br>
+[Problem 2: Valid Palindrome](https://github.com/organizedanvrchy/LeetCode/blob/main/Valid_Palindrome.py)<br>
+[Problem 3: 3Sum](https://github.com/organizedanvrchy/LeetCode/blob/main/3Sum.py)<br>
+
+### Session #2
+[Problem 1: Task Scheduler](https://github.com/organizedanvrchy/LeetCode/blob/main/Task_Scheduler.py)<br>
+[Problem 2: Brick Wall](https://github.com/organizedanvrchy/LeetCode/blob/main/Brick_Wall.py)<br>
+[Problem 3: Find a Celebrity](https://github.com/organizedanvrchy/LeetCode/blob/main/Find_a_Celebrity.py)
