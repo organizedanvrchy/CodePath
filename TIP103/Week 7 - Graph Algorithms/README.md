@@ -453,13 +453,15 @@ for row in distances:
 [Problem 1: Find All Possible Recipes from Given Supplies](https://github.com/organizedanvrchy/LeetCode/blob/main/Find_All_Possible_Recipes_from_Given_Supplies.py)<br>
 
 ### Session #1
-[Problem 1: 01 Matrix](https://github.com/organizedanvrchy/LeetCode/blob/main/01_Matrix.py)<br>
-[Problem 2: Flood Fill](https://github.com/organizedanvrchy/LeetCode/blob/main/Flood_Fill.py)<br>
-[Problem 3: Word Search](https://github.com/organizedanvrchy/LeetCode/blob/main/Word_Search.py)<br>
-[Problem 4: Rotting Oranges](https://github.com/organizedanvrchy/LeetCode/blob/main/Rotting_Oranges.py)<br>
+[Problem 1: Course Schedule II](https://github.com/organizedanvrchy/LeetCode/blob/main/Course_Schedule_II.py)<br>
+[Problem 2: Course Schedule IV](https://github.com/organizedanvrchy/LeetCode/blob/main/Course_Schedule_IV.py)<br>
+[Problem 3: Minimum Height Trees](https://github.com/organizedanvrchy/LeetCode/blob/main/Minimum_Height_Trees.py)<br>
+[Problem 4: Reconstruct Itinerary](https://github.com/organizedanvrchy/LeetCode/blob/main/Reconstruct_Itinerary.py)<br>
 
 ### Session #2
-[Problem 1: Number of Provinces](https://github.com/organizedanvrchy/LeetCode/blob/main/Number_of_Provinces.py)<br>
-[Problem 2: Clone Graph](https://github.com/organizedanvrchy/LeetCode/blob/main/Clone_Graph.py)<br>
-[Problem 3: Keys and Rooms](https://github.com/organizedanvrchy/LeetCode/blob/main/Keys_and_Rooms.py)
+[Problem 1: Network Delay Time](https://github.com/organizedanvrchy/LeetCode/blob/main/Network_Delay_Time.py)<br>
+[Problem 2: Redundant Connection](https://github.com/organizedanvrchy/LeetCode/blob/main/Redundant_Connection.py)<br>
+[Problem 3: Cheapest Flights Within K Stops](https://github.com/organizedanvrchy/LeetCode/blob/main/Cheapest_Flights_Within_K_Stops.py)<br>
+[Problem 4: Second Minimum Time to Reach Destination](https://github.com/organizedanvrchy/LeetCode/blob/main/Second_Minimum_Time_to_Reach_Destination.py)<br>
+[Problem 5: Number of Connected Components in an Undirected Graph](https://github.com/organizedanvrchy/LeetCode/blob/main/Number_of_Connected_Components.py)<br>
 
