@@ -20,8 +20,8 @@ This repository contains information that I have gathered and problems that I ha
     <td><a href="https://github.com/organizedanvrchy/CodePath/tree/main/TIP103/Week%203%20-%20Strings%20%26%20Arrays%20continued%2C%20Hash%20Tables%2C%20and%20Heaps">Strings/Arrays continued, Hash Tables, and Heaps</td>
   </tr>
   <tr>
-    <td>*Week 4</td>
-    <td>Review</td>
+    <td>Week 4</td>
+    <td><a href="https://github.com/organizedanvrchy/CodePath/tree/main/TIP103/Week%204%20-%20Review">Review</td>
   </tr>
   <tr>
     <td>Week 5</td>
