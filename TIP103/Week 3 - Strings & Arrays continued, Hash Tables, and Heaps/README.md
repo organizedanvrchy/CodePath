@@ -43,6 +43,8 @@ state = hash_table.get("state", "Key not found")
 print("Lookup 'state':", state)
 ```
 
+---
+
 # Heaps
 These data structures are a specialized binary tree-based data structure that satisfies a __heap__ property. Data is commonly stored in arrays, where the parent and child relationships can be calculated by index (eg, for index _i_, left child is _(2 * i + 1)_, while right child is _(2 * i + 2)_. Heaps can either be:
 1. __Max Heaps__ <br> This is where the parent node is greater than or equal to its children nodes.
