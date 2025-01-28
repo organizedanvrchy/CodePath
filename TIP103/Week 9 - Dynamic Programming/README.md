@@ -113,6 +113,8 @@ print(knapsack_with_items(values, weights, capacity))
 ---
 
 ### Warmups
+[Problem 1: Climbing Stairs](https://github.com/organizedanvrchy/LeetCode/blob/main/Climbing_Stairs.py) <br>
+[Problem 2: Min Path Sum](https://github.com/organizedanvrchy/LeetCode/blob/main/Min_Path_Sum.py) <br>
 
 ### Session #1
 
