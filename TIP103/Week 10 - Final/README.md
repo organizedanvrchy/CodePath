@@ -6,4 +6,6 @@
 
 ### Session #1
 
+### Session #2
+No Practice Questions Available.
 ---
