@@ -1,5 +1,5 @@
 # Topological Sort
-This is a common graphing concept that produces a linear ordering of vertices (nodes) in a DAG, where every for directed edge(_u -> v_), vertex _u_ comes before vertex _v_. This process entails: 
+This is a common graphing concept that produces a linear ordering of vertices (nodes) in a DAG, where for every directed edge(_u -> v_), vertex _u_ comes before vertex _v_. This process entails: 
 1. Identifying vertices with no incoming edges (indegree).
 2. Removing the vertex and its outgoing edges.
 3. Repeating the above.
